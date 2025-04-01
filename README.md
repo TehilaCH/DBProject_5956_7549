@@ -1,13 +1,13 @@
 # Medical Corps
 ## Phase 1: Design and Build the Database
 
-## **Introduction**  
+### **Introduction**  
 The **Medical Corps Database** is designed to efficiently manage information related to paramedics, patients, treatments, medical equipment, hospitals, and medical events.  
 This system ensures **structured organization** and tracking of essential details such as patient care, medical procedures, evacuation logistics, and resource management.  
 
 ---
 
-## **Purpose of the Database**  
+### **Purpose of the Database**  
 This database serves as a **structured and reliable solution** for the Medical Corps to:  
 
 - **Manage paramedic assignments** by recording their experience and linking them to performed treatments.  
@@ -19,7 +19,7 @@ This database serves as a **structured and reliable solution** for the Medical C
 
 ---
 
-## **Potential Use Cases**  
+### **Potential Use Cases**  
 - **Medical Corps Administrators** can oversee paramedic assignments, track patient treatments, and manage medical resources.  
 - **Paramedics** can document treatments performed and access relevant medical equipment records.  
 - **Hospital Staff** can monitor incoming evacuations, ensuring proper patient admission and care.  
