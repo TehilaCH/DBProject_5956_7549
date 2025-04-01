@@ -1,4 +1,5 @@
-# Phase 1: Design and Build the Database
+#Medical Corps
+## Phase 1: Design and Build the Database
 
 ## **Introduction**  
 The **Medical Corps Database** is designed to efficiently manage information related to paramedics, patients, treatments, medical equipment, hospitals, and medical events.  
