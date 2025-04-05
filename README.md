@@ -31,12 +31,14 @@ This **structured database** helps streamline **military medical operations**, i
 
 ##**ERD (Entity-Relationship Diagram)**
 
+![image](https://github.com/user-attachments/assets/da5a72ef-cd2a-4089-9fd3-fe25ce63078e)
 
-![image](https://github.com/user-attachments/assets/a2abbf05-e2e7-4c30-bc2f-4d5bc1cff5fe)
+
 
 ##**DSD (Data Structure Diagram)**
 
 
-![image](https://github.com/user-attachments/assets/8ec50007-a371-4357-a1a7-817598c412af)
+![image](https://github.com/user-attachments/assets/359cba96-4835-4f30-896a-a2dfd793bc3c)
+
 
 
