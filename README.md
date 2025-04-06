@@ -83,4 +83,6 @@ Provide the following SQL scripts:
  ####  Third tool: using python to create csv file
 
 
+### Backup 
+-   backups files are kept with the date and hour of the backup:  
 
