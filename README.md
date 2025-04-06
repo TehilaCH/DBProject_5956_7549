@@ -69,7 +69,8 @@ Provide the following SQL scripts:
 
  ![image](https://github.com/user-attachments/assets/12000609-88d4-444c-87f4-8821e94e7b69)
 
- ![image](https://github.com/user-attachments/assets/f69ac7b1-bc78-455f-873e-ba8afca63b22)
+![image](https://github.com/user-attachments/assets/a0c8323c-c322-4e51-9205-e364c3239460)
+
 
 
 ####  Second tool: using [generatedata](https://generatedata.com/generator). to create csv file 
