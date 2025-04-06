@@ -44,7 +44,7 @@ This **structured database** helps streamline **military medical operations**, i
 Provide the following SQL scripts:  
 - **Create Tables Script** - The SQL script for creating the database tables is available in the repository:
   
-📜- **[Medical_Corps_createTables.sql](medical_corps_createTables%20(1).sql)**
+ 📜- **[Medical_Corps_createTables.sql](medical_corps_createTables%20(1).sql)**
 
 - **Insert Data Script** - The SQL script for insert data to the database tables is available in the repository:  
 📜- **[Medical_Corps_insertTables.sql](Medical_Corps_insertTables%20(1).sql)**
