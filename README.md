@@ -40,5 +40,23 @@ This **structured database** helps streamline **military medical operations**, i
 
 ![image](https://github.com/user-attachments/assets/359cba96-4835-4f30-896a-a2dfd793bc3c)
 
+###  SQL Scripts  
+Provide the following SQL scripts:  
+- **Create Tables Script** - The SQL script for creating the database tables is available in the repository:  
+
+
+
+- **Insert Data Script** - The SQL script for insert data to the database tables is available in the repository:  
+
+
+ 
+- **Drop Tables Script** - The SQL script for droping all tables is available in the repository:  
+
+ 
+
+- **Select All Data Script**  - The SQL script for selectAll tables is available in the repository:  
+
+
+
 
 
