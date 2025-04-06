@@ -43,16 +43,16 @@ This **structured database** helps streamline **military medical operations**, i
 ###  SQL Scripts  
 Provide the following SQL scripts:  
 - **Create Tables Script** - The SQL script for creating the database tables is available in the repository:
-- [Medical_Corps_createTables.sql](medical_corps_createTables%20(1).sql)
+📜- **[Medical_Corps_createTables.sql](medical_corps_createTables%20(1).sql)**
 
 - **Insert Data Script** - The SQL script for insert data to the database tables is available in the repository:  
-- [Medical_Corps_insertTables.sql](Medical_Corps_insertTables%20(1).sql)
+📜- **[Medical_Corps_insertTables.sql](Medical_Corps_insertTables%20(1).sql)**
  
 - **Drop Tables Script** - The SQL script for droping all tables is available in the repository:  
-- [Medical_Corps_dropTables.sql](Medical_Corps_dropTables%20(1).sql)
+📜- **[Medical_Corps_dropTables.sql](Medical_Corps_dropTables%20(1).sql)**
  
 - **Select All Data Script**  - The SQL script for selectAll tables is available in the repository:  
-- [Medical_Corps_selectAll.sql](Medical_Corps_selectAll%20(1).sql) 
+📜- **[Medical_Corps_selectAll.sql](Medical_Corps_selectAll%20(1).sql)** 
 
  ###  Data  
  ####  First tool: using [mockaro](https://www.mockaroo.com/) to create csv file
@@ -60,7 +60,7 @@ Provide the following SQL scripts:
 
  ![image](https://github.com/user-attachments/assets/1cea1c80-8e39-45df-86e8-96b7897a5833)
 
- [ParamedicData.csv](https://github.com/TehilaCH/Databases/raw/main/ParamedicData.csv)
+📜 **[ParamedicData.csv](https://github.com/TehilaCH/Databases/raw/main/ParamedicData.csv)**
  
  ![image](https://github.com/user-attachments/assets/f38cc4dd-e10a-4acf-8a9c-21d0cf4be148)
 
