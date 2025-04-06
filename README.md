@@ -69,4 +69,14 @@ Provide the following SQL scripts:
 
  ![image](https://github.com/user-attachments/assets/12000609-88d4-444c-87f4-8821e94e7b69)
 
+####  Second tool: using [generatedata](https://generatedata.com/generator). to create csv file 
+#####  Entering a data to Medical_equipment table
+ ![image](https://github.com/user-attachments/assets/67218d4a-d127-474a-8181-3e36840aa8c2)
+
+ ![image](https://github.com/user-attachments/assets/e2dd38e7-591a-45bc-87b9-b66314f9eaff)
+ ![image](https://github.com/user-attachments/assets/3f7ec108-b2ca-461a-af45-ed63cada98d6)
+
+ ####  Third tool: using python to create csv file
+
+
 
