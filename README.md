@@ -60,10 +60,8 @@ Provide the following SQL scripts:
  #####  Entering a data to paramedic table
 
  ![image](https://github.com/user-attachments/assets/1cea1c80-8e39-45df-86e8-96b7897a5833)
- 
-📜**[ParamedicData.csv](https://github.com/TehilaCH/Databases/blob/main/phase1/mockaroo/ParamedicData.csv)**
 
-📜 **[ParamedicData.csv](https://github.com/TehilaCH/Databases/raw/main/phase1/mockaroo/ParamedicData.csv)**
+📜 **[ParamedicData.csv](https://github.com/TehilaCH/Databases/blob/main/phase1/mockaroo/ParamedicData.csv)**
 
  
  ![image](https://github.com/user-attachments/assets/f38cc4dd-e10a-4acf-8a9c-21d0cf4be148)
