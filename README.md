@@ -1,8 +1,8 @@
 # Medical Corps
 
 ### Database Design and Development by:
-- Tehila Chananayev
 - Hodaya Ben Shabat
+- Tehila Chananayev
 
 ### Organization:
 - Israel Defense Forces (IDF), Medical Corps – Health Division
