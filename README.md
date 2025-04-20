@@ -53,8 +53,7 @@ Provide the following SQL scripts:
 📜 **[Medical_Corps_dropTables.sql](phase1/dropTables.sql)**
 
 - **Select All Data Script** - The SQL script for selecting all data from the tables is available in the repository:
- 📜 **[Medical_Corps_selectAllTables.sql](phase1/selectAllTables.sql)**
-
+📜 **[Medical_Corps_selectAllTables.sql](phase1/selectAllTables.sql)**
 
  ###  Data  
  ####  First tool: using [mockaro](https://www.mockaroo.com/) to create csv file
