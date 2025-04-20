@@ -23,7 +23,7 @@
   - [First Tool: Mockaroo](#first-tool-using-mockaro-to-create-csv-file)
   - [Second Tool: Generatedata](#second-tool-using-generatedata-to-create-csv-file)
   - [Third Tool: Python](#third-tool-using-python-to-create-csv-file)
-- [Backup and Restore](#backup
+- [Backup and Restore](#backup)
 
   
 - [שם מגישה נוספת אם יש]
@@ -57,13 +57,13 @@ This database serves as a **structured and reliable solution** for the Medical C
 
 This **structured database** helps streamline **military medical operations**, improving **organization, efficiency, and responsiveness** in both **routine and emergency scenarios**. 
 
-##**ERD (Entity-Relationship Diagram)**
+## **ERD (Entity-Relationship Diagram)**
 
 ![image](https://github.com/user-attachments/assets/da5a72ef-cd2a-4089-9fd3-fe25ce63078e)
 
 
 
-##**DSD (Data Structure Diagram)**
+## **DSD (Data Structure Diagram)**
 
 
 ![image](https://github.com/user-attachments/assets/359cba96-4835-4f30-896a-a2dfd793bc3c)
