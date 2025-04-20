@@ -1,6 +1,6 @@
 # Medical Corps
 
-### Submitted by:
+### Database Design and Development by:
 - Tehila Chananayev
 - Hodaya Ben Shabat
 
