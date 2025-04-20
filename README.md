@@ -55,6 +55,22 @@ Provide the following SQL scripts:
 - **Select All Data Script** - The SQL script for selecting all data from the tables is available in the repository:
 📜 **[Medical_Corps_selectAllTables.sql](phase1/selectAllTables.sql)**
 
+
+
+- **Create Tables Script** - The SQL script for creating tables in the database is available in the repository:  
+📜 **[Medical_Corps_createTables.sql](phase1/createTables.sql)**
+
+- **Insert Data Script** - The SQL script for inserting data into the database tables is available in the repository:  
+📜 **[Medical_Corps_insertTables.sql](phase1/insertTables.sql)**
+
+- **Drop Tables Script** - The SQL script for dropping all tables is available in the repository:  
+📜 **[Medical_Corps_dropTables.sql](phase1/dropTables.sql)**
+
+- **Select All Data Script** - The SQL script for selecting all data from the tables is available in the repository:  
+📜 **[Medical_Corps_selectAllTables.sql](phase1/selectAllTables.sql)**
+
+
+
  ###  Data  
  ####  First tool: using [mockaro](https://www.mockaroo.com/) to create csv file
  #####  Entering a data to paramedic table
