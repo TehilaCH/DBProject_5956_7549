@@ -61,6 +61,7 @@ Provide the following SQL scripts:
 
  ![image](https://github.com/user-attachments/assets/1cea1c80-8e39-45df-86e8-96b7897a5833)
  
+📜**[ParamedicData.csv](https://github.com/TehilaCH/Databases/blob/main/phase1/mockaroo/ParamedicData.csv)**
 
 📜 **[ParamedicData.csv](https://github.com/TehilaCH/Databases/raw/main/phase1/mockaroo/ParamedicData.csv)**
 
