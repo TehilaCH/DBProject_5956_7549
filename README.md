@@ -26,7 +26,6 @@
 - [Backup and Restore](#backup)
 
   
-- [שם מגישה נוספת אם יש]
 ## Phase 1: Design and Build the Database
 
 ### **Introduction**  
