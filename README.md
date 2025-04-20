@@ -92,5 +92,10 @@ Provide the following SQL scripts:
 
 
 ### Backup 
--   backups files are kept with the date and hour of the backup:  
+-   backups files are kept with the date and hour of the backup:
+  ![image](https://github.com/user-attachments/assets/14eff330-cc7d-4833-9e47-c557c95efe34)
+
+  ![image](https://github.com/user-attachments/assets/74c6f76a-583a-4459-8551-6b97ab412a53)
+
+
 
