@@ -1,4 +1,32 @@
 # Medical Corps
+
+### Submitted by:
+- Tehila Chananayev
+- Hodaya Ben Shabat
+
+### Organization:
+- Israel Defense Forces (IDF), Medical Corps – Health Division
+
+## 📑 Table of Contents
+
+- [Medical Corps](#medical-corps)
+- [Submitted by](#submitted-by)
+- [Organization](#organization)
+- [Phase 1: Design and Build the Database](#phase-1-design-and-build-the-database)
+- [Introduction](#introduction)
+- [Purpose of the Database](#purpose-of-the-database)
+- [Potential Use Cases](#potential-use-cases)
+- [ERD (Entity-Relationship Diagram)](#erd-entity-relationship-diagram)
+- [DSD (Data-Structure Diagram)](#dsd-data-structure-diagram)
+- [SQL Scripts](#sql-scripts)
+- [Data](#data)
+  - [First Tool: Mockaroo](#first-tool-using-mockaro-to-create-csv-file)
+  - [Second Tool: Generatedata](#second-tool-using-generatedata-to-create-csv-file)
+  - [Third Tool: Python](#third-tool-using-python-to-create-csv-file)
+- [Backup and Restore](#backup
+
+  
+- [שם מגישה נוספת אם יש]
 ## Phase 1: Design and Build the Database
 
 ### **Introduction**  
@@ -93,9 +121,13 @@ Provide the following SQL scripts:
 
 ### Backup 
 -   backups files are kept with the date and hour of the backup:
+  
+- **Backup Screenshot:**  
   ![image](https://github.com/user-attachments/assets/14eff330-cc7d-4833-9e47-c557c95efe34)
 
    ![image](https://github.com/user-attachments/assets/74c6f76a-583a-4459-8551-6b97ab412a53)
+  
+- **Restore Screenshot:**  
 
 
 
