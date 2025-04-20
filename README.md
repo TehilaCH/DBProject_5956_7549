@@ -82,6 +82,10 @@ Provide the following SQL scripts:
  ![image](https://github.com/user-attachments/assets/e2dd38e7-591a-45bc-87b9-b66314f9eaff)
  ![image](https://github.com/user-attachments/assets/3f7ec108-b2ca-461a-af45-ed63cada98d6)
 
+
+ 📜 **[EquipmentData.csv](https://github.com/TehilaCH/Databases/blob/main/phase1/generatedata/EquipmentData.csv)**
+ 
+
  ####  Third tool: using python to create csv file
 
 
