@@ -129,4 +129,13 @@ Provide the following SQL scripts:
 - **Restore Screenshot:**  
 
 
+## Phase 2: Queries and constraints.
+
+שאילתא שמציגה את כל האירועים שהתרחשו בשנת 2024
+![image](https://github.com/user-attachments/assets/38bbe5ac-b359-44ad-9f63-b3166224081f)
+שאילתה שמציגה את כמות השימושים בציוד רפואי לפי חודש במהלך שנת 2023
+
+![image](https://github.com/user-attachments/assets/6bde7d13-e655-4f3a-9259-f7e7b8043e21)
+שאילתה שמציגה מספר הטיפולים שביצע כל פרמדיק בכל חודש ושנה.
+![image](https://github.com/user-attachments/assets/9ec45cb0-ec07-4b21-954b-7010abd2f264)
 
