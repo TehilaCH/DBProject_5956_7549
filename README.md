@@ -202,3 +202,17 @@ Provide the following SQL scripts:
 
 ![image](https://github.com/user-attachments/assets/181f248d-4749-4225-a6eb-a19083199c9d)
 
+**שלושה שאילתות לעדכון:**
+ ## 1.9. עדכון ניסיון פרמדיקים שפעלו באירועים רבי-נפגעים
+ **תיאור:** שאילתה זו מעדכנת את הניסיון של פרמדיקים שפעלו באירועים שבהם היו יותר מ-10 פצועים. מטרת השאילתה היא להוסיף שנה אחת לניסיון של כל פרמדיק שהשתתף בטיפול באירועים משמעותיים כאלה, מתוך הנחה כי השתתפות באירועים מורכבים תורמת לניסיון המקצועי.
+ **שאילתא:**
+ 
+  **נתונים לפני עדכון:**
+ 
+![image](https://github.com/user-attachments/assets/6529fcac-6fba-4c2f-920b-3a404a44c825)
+ 
+  **הרצה שאילתת עדכון:**
+![image](https://github.com/user-attachments/assets/a655e247-f1c9-41c1-bc8b-a6855aed05c9)
+ **נתונים אחרי עדכון:**
+ 
+![image](https://github.com/user-attachments/assets/dd61e92d-d82f-4548-ac17-702ba19b7f06)
