@@ -115,7 +115,7 @@ Provide the following SQL scripts:
  📜 **[EquipmentData.csv](https://github.com/TehilaCH/Databases/blob/main/phase1/generatedata/EquipmentData.csv)**
  
 
- ####  Third tool: using python to create csv file
+ ####  Third tool: using python to create sql file
 
 
 ### Backup 
