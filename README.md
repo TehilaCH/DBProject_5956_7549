@@ -228,8 +228,14 @@ Provide the following SQL scripts:
  **נתונים אחרי עדכון:**
 ![image](https://github.com/user-attachments/assets/441f4c35-da79-4733-a078-61f12b9df9c7)
 
- ## 3.עדכון כמות הציוד הרפואי עבור ציוד שנעשה בו שימוש ביותר מ-2 טיפולים
- **תיאור:**נעדכן את כמות הציוד הרפואי שנעשה בו שימוש ביותר מ-2 טיפולים, על מנת להבטיח שהציוד יישאר זמין ונגיש במקרים חוזרים.
+ ## 3.עדכון סוג פצוע עבור חולה שעבר יותר מ-3 טיפולים
+ **תיאור:**נעדכן את סוג הפצוע מ-1 (קל) ל-2 (בינוני), עבור חולה שעבר יותר מ-3 טיפולים שונים.
   **נתונים לפני עדכון:**
- 
- 
+  ![image](https://github.com/user-attachments/assets/e15617fc-db0a-48b6-b736-5404accd622b)
+
+ **הרצה שאילתת עדכון:**
+ ![image](https://github.com/user-attachments/assets/6a516537-3429-46d3-8095-aca04001dba8)
+
+  **נתונים אחרי עדכון:**
+  ![image](https://github.com/user-attachments/assets/d0f4f767-6f78-4ec3-a33b-de30de4b887a)
+
