@@ -279,6 +279,7 @@ Provide the following SQL scripts:
  **שאילתא:**
   **נתונים לפני מחיקה:**
   
+  
 ![image](https://github.com/user-attachments/assets/6940a5b7-b7e0-4bfa-88ed-c5900e018062)
   **הרצה שאילתת מחיקה:**
   
@@ -295,7 +296,7 @@ Provide the following SQL scripts:
  ## 3.מחיקת בתי חולים שלא נקלטו אליהם פצועים
  **תיאור:** השאילתה מסירה מהמערכת בתי חולים שלא נקלט אליהם אף פצוע בטבלת הפצועים.
  **שאילתא:**
-  **נתונים לפני מחיקה:**
+**נתונים לפני מחיקה:**
   
   
  ![image](https://github.com/user-attachments/assets/eb1db62d-c09b-481b-b70e-e745e7b59a7f)
