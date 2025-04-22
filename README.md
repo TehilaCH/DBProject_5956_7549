@@ -121,13 +121,19 @@ Provide the following SQL scripts:
 ### Backup 
 -   backups files are kept with the date and hour of the backup:
   
-- **Backup Screenshot:**  
+- **Backup Screenshot:**
+- 
+   ![image](https://github.com/user-attachments/assets/0247af87-d0a4-4062-9450-c3288120e535)
+
   ![image](https://github.com/user-attachments/assets/14eff330-cc7d-4833-9e47-c557c95efe34)
 
    ![image](https://github.com/user-attachments/assets/74c6f76a-583a-4459-8551-6b97ab412a53)
   
-- **Restore Screenshot:**  
+- **Restore Screenshot:**
+- 
+   ![image](https://github.com/user-attachments/assets/2bdd2f53-5d59-402d-8487-e02937ba1de7)
 
+   ![image](https://github.com/user-attachments/assets/cb8f0522-9101-42ba-b224-6e926f2de52a)
 
 # דוח פרויקט - שלב ב'
 
