@@ -125,8 +125,6 @@ Provide the following SQL scripts:
 - 
    ![image](https://github.com/user-attachments/assets/0247af87-d0a4-4062-9450-c3288120e535)
 
-  ![image](https://github.com/user-attachments/assets/14eff330-cc7d-4833-9e47-c557c95efe34)
-
    ![image](https://github.com/user-attachments/assets/74c6f76a-583a-4459-8551-6b97ab412a53)
   
 - **Restore Screenshot:**
