@@ -212,8 +212,10 @@ Provide the following SQL scripts:
 ![image](https://github.com/user-attachments/assets/6529fcac-6fba-4c2f-920b-3a404a44c825)
  
   **הרצה שאילתת עדכון:**
+  
 ![image](https://github.com/user-attachments/assets/a655e247-f1c9-41c1-bc8b-a6855aed05c9)
  **נתונים אחרי עדכון:**
+ 
  
 ![image](https://github.com/user-attachments/assets/dd61e92d-d82f-4548-ac17-702ba19b7f06)
 
@@ -255,6 +257,7 @@ Provide the following SQL scripts:
 
  ![image](https://github.com/user-attachments/assets/961fa830-a792-4a70-8b63-54a20a468689)
 **הרצה שאילתת מחיקה:**
+
  
  ![image](https://github.com/user-attachments/assets/d443d234-3e1f-4a04-9a13-190cfb293c9a)
 
@@ -269,6 +272,7 @@ Provide the following SQL scripts:
 ![image](https://github.com/user-attachments/assets/6940a5b7-b7e0-4bfa-88ed-c5900e018062)
 **הרצה שאילתת מחיקה:**
 
+
 ![image](https://github.com/user-attachments/assets/f987af76-80fa-408e-8ee2-c4f87da5a9c7)
 
    **נתונים אחרי מחיקה:**
@@ -280,12 +284,15 @@ Provide the following SQL scripts:
  **תיאור:** השאילתה מסירה מהמערכת בתי חולים שלא נקלט אליהם אף פצוע בטבלת הפצועים.
  **שאילתא:**
   **נתונים לפני מחיקה:**
+  
  ![image](https://github.com/user-attachments/assets/eb1db62d-c09b-481b-b70e-e745e7b59a7f)
 
 **הרצה שאילתת מחיקה:**
+
 ![image](https://github.com/user-attachments/assets/318c8892-dbd9-48e0-bf77-8a6f799109e2)
 
  **נתונים אחרי מחיקה:**
+ 
  ![image](https://github.com/user-attachments/assets/826fcb2b-35ec-48fd-a901-62240298432f)
 
  
