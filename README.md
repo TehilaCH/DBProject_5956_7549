@@ -223,14 +223,17 @@ Provide the following SQL scripts:
  **תיאור:**נעדכן את כמות הציוד הרפואי שנעשה בו שימוש ביותר מ-2 טיפולים, על מנת להבטיח שהציוד יישאר זמין ונגיש במקרים חוזרים.
  
 **נתונים לפני עדכון:**
+
  
 ![image](https://github.com/user-attachments/assets/a83a428f-75cd-4626-9302-7575b82020f6)
 **הרצה שאילתת עדכון:**
 
 
+
 ![image](https://github.com/user-attachments/assets/61837f05-611c-4d26-8232-a5eee54d4d44)
 
  **נתונים אחרי עדכון:**
+ 
  
 ![image](https://github.com/user-attachments/assets/441f4c35-da79-4733-a078-61f12b9df9c7)
 
@@ -239,13 +242,16 @@ Provide the following SQL scripts:
  **תיאור:**נעדכן את סוג הפצוע מ-1 (קל) ל-2 (בינוני), עבור חולה שעבר יותר מ-3 טיפולים שונים.
   **נתונים לפני עדכון:**
   
+  
   ![image](https://github.com/user-attachments/assets/e15617fc-db0a-48b6-b736-5404accd622b)
 
  **הרצה שאילתת עדכון:**
  
+ 
  ![image](https://github.com/user-attachments/assets/6a516537-3429-46d3-8095-aca04001dba8)
 
   **נתונים אחרי עדכון:**
+  
   
   ![image](https://github.com/user-attachments/assets/d0f4f767-6f78-4ec3-a33b-de30de4b887a)
 
@@ -254,14 +260,17 @@ Provide the following SQL scripts:
  **תיאור:**השאילתה מוחקת פריטי ציוד רפואי שלא נעשה בהם שימוש באף טיפול, כלומר כאלה שלא מופיעים בטבלת השימוש בציוד.
  **שאילתא:**
   **נתונים לפני מחיקה:**
+  
 
  ![image](https://github.com/user-attachments/assets/961fa830-a792-4a70-8b63-54a20a468689)
-**הרצה שאילתת מחיקה:**
+ **הרצה שאילתת מחיקה:**
+
 
  
  ![image](https://github.com/user-attachments/assets/d443d234-3e1f-4a04-9a13-190cfb293c9a)
 
  **נתונים אחרי מחיקה:**
+ 
  
 ![image](https://github.com/user-attachments/assets/0d1b8ae4-7872-4ad0-82fe-7ec2b33231e2)
 
@@ -269,13 +278,16 @@ Provide the following SQL scripts:
  **תיאור:**השאילתה מוחקת את כל הפצועים שלא מופיעים בטבלת הטיפולים, כלומר כאלה שלא עברו אף טיפול.
  **שאילתא:**
   **נתונים לפני מחיקה:**
+  
 ![image](https://github.com/user-attachments/assets/6940a5b7-b7e0-4bfa-88ed-c5900e018062)
-**הרצה שאילתת מחיקה:**
+  **הרצה שאילתת מחיקה:**
+  
 
 
 ![image](https://github.com/user-attachments/assets/f987af76-80fa-408e-8ee2-c4f87da5a9c7)
 
    **נתונים אחרי מחיקה:**
+   
 
 ![image](https://github.com/user-attachments/assets/31338719-d608-4868-8096-f3b28c204ad0)
 
@@ -285,13 +297,16 @@ Provide the following SQL scripts:
  **שאילתא:**
   **נתונים לפני מחיקה:**
   
+  
  ![image](https://github.com/user-attachments/assets/eb1db62d-c09b-481b-b70e-e745e7b59a7f)
 
-**הרצה שאילתת מחיקה:**
+ **הרצה שאילתת מחיקה:**
+ 
 
 ![image](https://github.com/user-attachments/assets/318c8892-dbd9-48e0-bf77-8a6f799109e2)
 
  **נתונים אחרי מחיקה:**
+ 
  
  ![image](https://github.com/user-attachments/assets/826fcb2b-35ec-48fd-a901-62240298432f)
 
