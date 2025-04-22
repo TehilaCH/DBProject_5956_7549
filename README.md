@@ -321,4 +321,35 @@ Provide the following SQL scripts:
  
  ![image](https://github.com/user-attachments/assets/826fcb2b-35ec-48fd-a901-62240298432f)
 
+ ## אילוצים:
+  ## 1.בדיקה/check
+  **תיאור:** בוצע אילוץ על העמודה treatment_type, שמגביל את הערכים האפשריים לשלושה סוגים בלבד:
+   טיפול דחוף אך לא מסכן חיים מידית-'emergency'
+   טיפול מציל חיים שיש לבצע מיידית-'critical'
+   טיפול רגיל שלא דורש התערבות מיידית-'routine'
+   מטרת האילוץ היא להבטיח שמירה על תקינות וסיווג ברור של סוגי הטיפולים במערכת.  
+  ![image](https://github.com/user-attachments/assets/4ca67f52-9857-4975-aac8-b617f10136d9)
+
+  ![image](https://github.com/user-attachments/assets/5a95fb61-2c0e-4513-b904-880cc198cd2b)
+
+  ![image](https://github.com/user-attachments/assets/ba914828-82fa-429b-8d16-77873c7cef35)
+
+ ## 2.ערך בררת מחדל/defalt
+ **תיאור:** הוגדר ערך ברירת מחדל לעמודה experience כך שאם לא יוזן ערך במעמד הכנסת הנתונים, יוקצה באופן אוטומטי ערך של 0, המייצג פרמדיק ללא ניסיון קודם.
+   מטרת האילוץ היא לאפשר הכנסת נתונים חלקית מבלי לפגוע בשלמות הנתונים, תוך שמירה על משמעות לוגית ברורה עבור ערך ברירת המחדל.
  
+  ![image](https://github.com/user-attachments/assets/4a04200c-1146-4e59-9364-fe46d9c88e20)
+
+  ![image](https://github.com/user-attachments/assets/fd487e58-9af4-4a43-b0a3-b0c8d4192895)
+
+  ![image](https://github.com/user-attachments/assets/38726623-517c-4ed3-b262-b1a3416f94e1)
+
+  ## 3.ערך/not null
+  **תיאור:** הוגדר אילוץ על השדה event_date כך שלא ניתן להזין אירוע רפואי ללא תאריך.
+    מטרת האילוץ היא להבטיח שכל אירוע יתועד עם ציון זמן מדויק – דבר חיוני למעקב, תיעוד רפואי, ותהליכי ניתוח נתונים.
+    
+  ![image](https://github.com/user-attachments/assets/eff382f8-d7b4-4940-883b-86e25dc27c57)
+
+  ![image](https://github.com/user-attachments/assets/447099a6-f158-407b-9015-6ee071f798e7)
+
+
