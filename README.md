@@ -324,28 +324,14 @@ Provide the following SQL scripts:
 
  ## שמירה וביטול שינויים/commit, rollback:
  **תיאור:** COMMIT: שמירה סופית של השינויים בבסיס הנתונים.
- ![image](https://github.com/user-attachments/assets/ff2a3a64-25dc-4f7c-8391-dd8d90aeb25d)
- 
- ![image](https://github.com/user-attachments/assets/703f10ab-a463-47b4-853c-f2c4b5924a6c)
- שמירת השינויים:
- ![image](https://github.com/user-attachments/assets/eb53a80d-7aad-4951-b0b7-e255fa224b31)
+
+ ![image](https://github.com/user-attachments/assets/06544aea-a611-44bb-9fd7-b836ce42de7b)
+
 
  **תיאור:** ROLLBACK: ביטול השינויים האחרונים, מחזיר את בסיס הנתונים למצבו לפני העדכון.
- ![image](https://github.com/user-attachments/assets/6bd3a77f-9da4-4f61-92ac-988b9fb497e6)
  
- 
- ![image](https://github.com/user-attachments/assets/00cf6da1-4b6f-48ca-8c16-66db713cb278)
- 
+![image](https://github.com/user-attachments/assets/6ce0d164-fd86-4b3f-9157-db7b2bbe295e)
 
- ביטול השינויים:
- 
- ![image](https://github.com/user-attachments/assets/bc80e98c-fa0b-49b8-8b4f-320d63bcf51b)
- 
- 
-
- בדיקה שהשינויים אכן בוטלו:
- ![image](https://github.com/user-attachments/assets/945fc906-1fe0-4e56-b40d-0f961d2276c6)
- 
 
 
  
