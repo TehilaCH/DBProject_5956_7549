@@ -333,14 +333,19 @@ Provide the following SQL scripts:
  **תיאור:** ROLLBACK: ביטול השינויים האחרונים, מחזיר את בסיס הנתונים למצבו לפני העדכון.
  ![image](https://github.com/user-attachments/assets/6bd3a77f-9da4-4f61-92ac-988b9fb497e6)
  
+ 
  ![image](https://github.com/user-attachments/assets/00cf6da1-4b6f-48ca-8c16-66db713cb278)
+ 
 
  ביטול השינויים:
  
  ![image](https://github.com/user-attachments/assets/bc80e98c-fa0b-49b8-8b4f-320d63bcf51b)
+ 
+ 
 
  בדיקה שהשינויים אכן בוטלו:
  ![image](https://github.com/user-attachments/assets/945fc906-1fe0-4e56-b40d-0f961d2276c6)
+ 
 
 
  
