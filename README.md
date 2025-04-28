@@ -322,6 +322,20 @@ Provide the following SQL scripts:
  
  ![image](https://github.com/user-attachments/assets/826fcb2b-35ec-48fd-a901-62240298432f)
 
+ ## שמירה וביטול שינויים/commit, rollback:
+ **תיאור:** COMMIT: שמירה סופית של השינויים בבסיס הנתונים.
+ ![image](https://github.com/user-attachments/assets/ff2a3a64-25dc-4f7c-8391-dd8d90aeb25d)
+ ![image](https://github.com/user-attachments/assets/703f10ab-a463-47b4-853c-f2c4b5924a6c)
+ ![image](https://github.com/user-attachments/assets/eb53a80d-7aad-4951-b0b7-e255fa224b31)
+
+ **תיאור:** ROLLBACK: ביטול השינויים האחרונים, מחזיר את בסיס הנתונים למצבו לפני העדכון.
+ ![image](https://github.com/user-attachments/assets/6bd3a77f-9da4-4f61-92ac-988b9fb497e6)
+ ![image](https://github.com/user-attachments/assets/00cf6da1-4b6f-48ca-8c16-66db713cb278)
+ ![image](https://github.com/user-attachments/assets/bc80e98c-fa0b-49b8-8b4f-320d63bcf51b)
+ ![image](https://github.com/user-attachments/assets/945fc906-1fe0-4e56-b40d-0f961d2276c6)
+
+
+ 
  ## אילוצים:
   ## 1.בדיקה/check
   **תיאור:** בוצע אילוץ על העמודה treatment_type, שמגביל את הערכים האפשריים לשלושה סוגים בלבד:
