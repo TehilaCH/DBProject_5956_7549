@@ -140,7 +140,7 @@ Provide the following SQL scripts:
 **תיאור:**  
 שאילתה זו מציגה את כל האירועים הרפואיים שהתרחשו במהלך שנת 2024, באמצעות סינון לפי תאריך.
 
-**שאילתא:**  **(phase2/Select queries/Query_select1.sql)**
+**שאילתא:** (phase2/Select%20queries/Query_select1.sql)
 ![image](https://github.com/user-attachments/assets/8cd3eb33-b8bd-4450-b8b7-60d08b59dd2a)
 
 ## 2. כמות השימושים בציוד רפואי לפי חודש בשנת 2023
