@@ -203,7 +203,9 @@ Provide the following SQL scripts:
 **תיאור:** הטבלה מציגה את הפרמדיקים שרמת הניסיון שלהם גבוהה מהממוצע הכללי של כלל הפרמדיקים.  
 **שאילתא:**
 
-![image](https://github.com/user-attachments/assets/d13e992e-f575-47b9-b441-964d60fcb6eb)
+![image](https://github.com/user-attachments/assets/45cb0224-c0ee-4a11-ab0c-9cd9827b3c4f)
+
+
 
 
 
@@ -348,7 +350,7 @@ Provide the following SQL scripts:
 
   ![image](https://github.com/user-attachments/assets/ba914828-82fa-429b-8d16-77873c7cef35)
 
- ## 2.ערך בררת מחדל/defalt
+ ## 2.ערך בררת מחדל/default
  **תיאור:** הוגדר ערך ברירת מחדל לעמודה experience כך שאם לא יוזן ערך במעמד הכנסת הנתונים, יוקצה באופן אוטומטי ערך של 0, המייצג פרמדיק ללא ניסיון קודם.
    מטרת האילוץ היא לאפשר הכנסת נתונים חלקית מבלי לפגוע בשלמות הנתונים, תוך שמירה על משמעות לוגית ברורה עבור ערך ברירת המחדל.
  
