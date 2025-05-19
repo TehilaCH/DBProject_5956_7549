@@ -149,7 +149,7 @@ Provide the following SQL scripts:
 **תיאור:**  
 שאילתה זו מציגה את כמות השימושים בציוד רפואי בכל חודש במהלך שנת 2023, על מנת להבין את דפוסי השימוש לאורך השנה.
 
-**שאילתא:**  **[Query_select2.sql](phase2/Select%20queries/Query_select1.sql)**
+**שאילתא:**  **[Query_select2.sql](phase2/Select%20queries/Query_select2.sql)**
 
 ![image](https://github.com/user-attachments/assets/6bde7d13-e655-4f3a-9259-f7e7b8043e21)
 
@@ -158,7 +158,7 @@ Provide the following SQL scripts:
 **תיאור:**  
 הטבלה מציגה את מספר הטיפולים שכל פרמדיק ביצע, מקובץ לפי חודש ושנה.
 
-**שאילתא:**  **[Query_select3.sql](phase2/Select%20queries/Query_select1.sql)**
+**שאילתא:**  **[Query_select3.sql](phase2/Select%20queries/Query_select3.sql)**
 
 
 
@@ -170,7 +170,7 @@ Provide the following SQL scripts:
 **תיאור:**  
 שאילתה זו מציגה חולים אשר קיבלו יותר מ-2 טיפולים שונים, לצורך איתור מקרים רפואיים מורכבים יותר.
 
-**שאילתא:** **[Query_select4.sql](phase2/Select%20queries/Query_select1.sql)**
+**שאילתא:** **[Query_select4.sql](phase2/Select%20queries/Query_select4.sql)**
 
 
 ![image](https://github.com/user-attachments/assets/5a43dd09-1409-493b-8190-5d0d1584eef8)
@@ -181,7 +181,7 @@ Provide the following SQL scripts:
 **תיאור:**  
 מטרת שאילתה זו היא לאתר פרמדיקים שפעלו באירועים רבי-נפגעים (מעל 10 פצועים).
 
-**שאילתא:** **[Query_select5.sql](phase2/Select%20queries/Query_select1.sql)**
+**שאילתא:** **[Query_select5.sql](phase2/Select%20queries/Query_select5.sql)**
 
 
 ![image](https://github.com/user-attachments/assets/3c044109-284b-45b7-a849-2c8444073280)
@@ -190,7 +190,7 @@ Provide the following SQL scripts:
 
 **תיאור:**  הטבלה מציגה ציוד רפואי אשר שימש ביותר מ-5 טיפולים שונים, כדי לאתר ציוד בשימוש תדיר.
 
-**שאילתא:**  **[Query_select6.sql](phase2/Select%20queries/Query_select1.sql)**
+**שאילתא:**  **[Query_select6.sql](phase2/Select%20queries/Query_select6.sql)**
 
  ![image](https://github.com/user-attachments/assets/a96c6021-fc14-4c41-8c9b-5e524c177f12)
 שאילתה שמציגה חולים שטופלו בטיפולים שבוצעו על ידי חובשים עם ניסיון מעל 10
@@ -199,14 +199,14 @@ Provide the following SQL scripts:
 
 **תיאור:**  הטבלה מציגה את החולים שטופלו על ידי פרמדיקים מנוסים (ניסיון מעל 10 שנים), כדי לבחון את הקשר בין ניסיון לטיפול.
 
-**שאילתא:**  **[Query_select7.sql](phase2/Select%20queries/Query_select1.sql)**
+**שאילתא:**  **[Query_select7.sql](phase2/Select%20queries/Query_select7.sql)**
 
 
 ![image](https://github.com/user-attachments/assets/2fc1de94-2e71-4e10-b7cc-4c6c4f48f7a8)
  ## 8. מציאת הפרמדיקים עם ניסיון מעל לממוצע של כל הפרמדיקים
  
 **תיאור:** הטבלה מציגה את הפרמדיקים שרמת הניסיון שלהם גבוהה מהממוצע הכללי של כלל הפרמדיקים.  
-**שאילתא:** **[Query_select8.sql](phase2/Select%20queries/Query_select1.sql)**
+**שאילתא:** **[Query_select8.sql](phase2/Select%20queries/Query_select8.sql)**
 
 
 ![image](https://github.com/user-attachments/assets/45cb0224-c0ee-4a11-ab0c-9cd9827b3c4f)
