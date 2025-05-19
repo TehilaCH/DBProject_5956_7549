@@ -235,6 +235,7 @@ Provide the following SQL scripts:
 
  ## 2.עדכון כמות הציוד הרפואי עבור ציוד שנעשה בו שימוש ביותר מ-2 טיפולים
  **תיאור:**נעדכן את כמות הציוד הרפואי שנעשה בו שימוש ביותר מ-2 טיפולים, על מנת להבטיח שהציוד יישאר זמין ונגיש במקרים חוזרים.
+  **שאילתא:** **[Query_update2.sql](phase2/Update%20query/Query_update2.sql)**
  
 **נתונים לפני עדכון:**
 
@@ -255,6 +256,7 @@ Provide the following SQL scripts:
  ## 3.עדכון סוג פצוע עבור חולה שעבר יותר מ-3 טיפולים
  **תיאור:**נעדכן את סוג הפצוע מ-1 (קל) ל-2 (בינוני), עבור חולה שעבר יותר מ-3 טיפולים שונים.
   **נתונים לפני עדכון:**
+   **שאילתא:** **[Query_update3.sql](phase2/Update%20query/Query_update3.sql)**
   
   
   ![image](https://github.com/user-attachments/assets/e15617fc-db0a-48b6-b736-5404accd622b)
