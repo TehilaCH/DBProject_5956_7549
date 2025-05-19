@@ -385,8 +385,8 @@ Provide the following SQL scripts:
 # דוח פרויקט - שלב ג'
 ## אינטגרציה ומבטים
 ### אגף המבצעים-DSD
+![image](https://github.com/user-attachments/assets/588f6c4f-08e5-4916-8ce7-c1bbff5d8ab1)
 
-![image](https://github.com/user-attachments/assets/265acdf1-ec35-4eaf-a96d-54ffb59a26f4)
 
 
 
