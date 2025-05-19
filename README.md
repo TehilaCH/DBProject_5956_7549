@@ -1,4 +1,4 @@
-# Medical Corps
+![image](https://github.com/user-attachments/assets/cad38c95-1e07-43e7-956a-a8a86a15cc68)# Medical Corps
 
 ### Database Design and Development by:
 - Hodaya Ben Shabat
@@ -382,5 +382,92 @@ Provide the following SQL scripts:
   ![image](https://github.com/user-attachments/assets/eff382f8-d7b4-4940-883b-86e25dc27c57)
 
   ![image](https://github.com/user-attachments/assets/447099a6-f158-407b-9015-6ee071f798e7)
+
+
+# דוח פרויקט - שלב ג'
+## אינטגרציה ומבטים
+### אגף המבצעים-DSD
+
+### מעבר מ-DSD ל-ERD – סקריפט
+**זיהוי ישויות (Entities):**
+
+ישות מזוהה כטבלה שיש לה מפתח ראשי (PRIMARY KEY) שאינו תלוי במפתחות זרים.
+
+לדוגמה:
+
+ב-Corps: זוהי ישות עצמאית כיוון שיש לה CorpsID כמפתח ראשי.
+
+ב-Commander: זוהי ישות עצמאית כיוון שיש לה ID כמפתח ראשי.
+
+ב-Operation: ישות עצמאית המייצגת מבצע (OperationID).
+
+---
+
+**זיהוי תכונות (Attributes):**
+
+כל שדה בטבלה שאינו מפתח ראשי או מפתח זר הוא תכונה של הישות.
+
+לדוגמה:
+
+ב-Corps, התכונות הן CorpsName, Specialization.
+
+ב-Commander, התכונות הן Name, Rank, ExperienceYears.
+
+
+**זיהוי קשרים (Relationships):**
+
+קשר (Relationship) הוא טבלה שמשלבת בין שתי ישויות ומכילה מפתחות זרים (FOREIGN KEY).
+
+אם יש בטבלה מפתח ראשי שמורכב ממספר מפתחות זרים – זו טבלת קשר.
+
+לדוגמה:
+
+ב-Executed_by: טבלת קשר בין Operation ל-Unit, המכילה את השדות OperationID, UnitID ו-CorpsID כמפתחות זרים.
+
+ב-Requires: טבלת קשר בין Operation ל-Equipment, עם OperationID ו-EquipmentID כמפתחות זרים.
+
+
+**זיהוי ישות חלשה (Weak Entity):**
+
+ישות חלשה היא טבלה שאין לה מפתח ראשי עצמאי ותלויה בישות אחרת.
+
+לדוגמה:
+
+ב-Operational_Report: הטבלה תלויה בקיום Operation ומכילה את OperationID כמפתח זר.
+
+ב-Task: תלויה במבצע (OperationID) ולכן נחשבת ישות חלשה.
+
+קביעת סוגי קשרים (1:1, 1:M, M:N):
+
+1:1: קשר בין שתי ישויות שבו לכל רשומה בישות אחת יש בדיוק רשומה אחת בישות השנייה.
+
+קשר 1:M: קשר שבו לכל רשומה בישות אחת יכולות להיות מספר רשומות בישות השנייה. לדוגמה, Commander ו-Operation.
+
+קשר M:N: קשר בו לכל רשומה בישות אחת יש מספר רשומות בישות השנייה ולהפך. לדוגמה, Executed_by ו-Requires.
+
+---
+
+**סיכום:**
+כל טבלה ב-DSD נבחנת לפי סוגה: ישות, ישות חלשה או קשר.
+
+ניתוח התכונות, המפתחות והקשרים מאפשר לעבור מ-DSD ל-ERD בצורה ברורה.
+
+תרשים ERD נבנה לאחר הגדרת הישויות, הקשרים והתכונות.
+
+
+### אגף המבצעים -ERD:
+
+
+![image](https://github.com/user-attachments/assets/f66bb03b-01ec-49fc-a755-b832588eed13)
+
+### אגפים ממוזגים ERD משותף לחיל רפואה וחיל המבצעים:
+
+![image](https://github.com/user-attachments/assets/71731c41-0194-48f1-9a86-b93d9318781b)
+
+
+
+
+
+
 
 
