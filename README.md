@@ -489,7 +489,7 @@ Provide the following SQL scripts:
 
 **הפשטת “אירועים”**
 
-יצרנו יישות‑אב Event (PK: event_id, event_location, event_date).
+יצרנו יישות‑על Event (PK: event_id, event_location, event_date).
 
 ממנה יורשות היישויות:
 
