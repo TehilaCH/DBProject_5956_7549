@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/cad38c95-1e07-43e7-956a-a8a86a15cc68)# Medical Corps
-
 ### Database Design and Development by:
 - Hodaya Ben Shabat
 - Tehila Chananayev
