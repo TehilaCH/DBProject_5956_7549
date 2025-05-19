@@ -386,6 +386,10 @@ Provide the following SQL scripts:
 ## אינטגרציה ומבטים
 ### אגף המבצעים-DSD
 
+![image](https://github.com/user-attachments/assets/265acdf1-ec35-4eaf-a96d-54ffb59a26f4)
+
+
+
 ### מעבר מ-DSD ל-ERD – סקריפט
 **זיהוי ישויות (Entities):**
 
