@@ -413,6 +413,7 @@ Provide the following SQL scripts:
 
 ב-Commander, התכונות הן Name, Rank, ExperienceYears.
 
+---
 
 **זיהוי קשרים (Relationships):**
 
@@ -426,6 +427,8 @@ Provide the following SQL scripts:
 
 ב-Requires: טבלת קשר בין Operation ל-Equipment, עם OperationID ו-EquipmentID כמפתחות זרים.
 
+---
+
 
 **זיהוי ישות חלשה (Weak Entity):**
 
@@ -437,7 +440,10 @@ Provide the following SQL scripts:
 
 ב-Task: תלויה במבצע (OperationID) ולכן נחשבת ישות חלשה.
 
-קביעת סוגי קשרים (1:1, 1:M, M:N):
+---
+
+
+**קביעת סוגי קשרים (1:1, 1:M, M:N):**
 
 1:1: קשר בין שתי ישויות שבו לכל רשומה בישות אחת יש בדיוק רשומה אחת בישות השנייה.
 
