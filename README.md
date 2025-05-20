@@ -466,11 +466,13 @@ Provide the following SQL scripts:
 ### אגף המבצעים -ERD:
 
 
-![image](https://github.com/user-attachments/assets/f66bb03b-01ec-49fc-a755-b832588eed13)
+![image](https://github.com/user-attachments/assets/627d1445-d969-421e-b8ba-d240f3abd5c7)
+
 
 ### אגפים ממוזגים ERD משותף לחיל רפואה וחיל המבצעים:
 
-![image](https://github.com/user-attachments/assets/71731c41-0194-48f1-9a86-b93d9318781b)
+![image](https://github.com/user-attachments/assets/c516fa2e-fc6a-4cfd-a32a-c1c8d5d2677c)
+
 
 
 
