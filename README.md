@@ -471,7 +471,8 @@ Provide the following SQL scripts:
 
 ### אגפים ממוזגים ERD משותף לחיל רפואה וחיל המבצעים:
 
-![image](https://github.com/user-attachments/assets/c516fa2e-fc6a-4cfd-a32a-c1c8d5d2677c)
+![image](https://github.com/user-attachments/assets/000c6e25-b09f-4e00-a7af-80e73d72803a)
+
 
 
 
