@@ -387,6 +387,9 @@ Provide the following SQL scripts:
 ### אגף המבצעים-DSD
 ![image](https://github.com/user-attachments/assets/588f6c4f-08e5-4916-8ce7-c1bbff5d8ab1)
 
+![image](https://github.com/user-attachments/assets/7a2a1234-ebef-4e48-85ed-72fdbfbcaed6)
+
+
 
 
 
@@ -501,27 +504,7 @@ Provide the following SQL scripts:
 
 ## מבטים:
 ### מבט ראשון-חיל רפואה:
-CREATE VIEW Medical_Treatments_View AS
-SELECT
-    t.treatment_id,
-    t.treatment_type,
-    t.treatment_duration,
-    t.date,
-    ps.soldier_name AS paramedic_name,
-    pt_soldier.soldier_name AS patient_name,
-    pt.birthday,
-    me.event_date,
-    h.hospital_name
-FROM Treatment t
-JOIN soldier ps ON t.paramedic_id = ps.soldier_id AND t.role_type = ps.role_type AND ps.role_type = 'paramedic'
-JOIN receives_treatment rt ON t.treatment_id = rt.treatment_id
-JOIN patient pt ON rt.soldier_id = pt.soldier_id AND rt.role_type = pt.role_type
-JOIN soldier pt_soldier ON pt.soldier_id = pt_soldier.soldier_id AND pt.role_type = pt_soldier.role_type AND pt_soldier.role_type = 'patient'
-JOIN Medical_event me ON pt.event_id = me.event_id
-LEFT JOIN Hospital h ON pt.hospital_id = h.hospital_id;
-
-
-
+![image](https://github.com/user-attachments/assets/6f7ecead-791c-4279-9e6c-36ef508e13ab)
 
 
 
@@ -532,14 +515,6 @@ LEFT JOIN Hospital h ON pt.hospital_id = h.hospital_id;
 ![image](https://github.com/user-attachments/assets/48adf0a5-5142-424e-8de2-aff4a777d5b8)
 
 
-SELECT DISTINCT patient_name
-FROM Medical_Treatments_View
-WHERE EXTRACT(YEAR FROM event_date) = 2023;
-
-
-
-
-
 
 
 
@@ -547,21 +522,12 @@ WHERE EXTRACT(YEAR FROM event_date) = 2023;
 ![image](https://github.com/user-attachments/assets/c39ed96a-02cd-4ef3-83fe-92c30a4a8a90)
 
 
-SELECT paramedic_name, COUNT(*) AS total_treatments
-FROM Medical_Treatments_View
-GROUP BY paramedic_name
-ORDER BY total_treatments DESC;
 
 
 
 
 
-
-
-
-
-## מבט שני -חיל מבצעים:
-
+### מבט שני -חיל מבצעים:
 
 
 
@@ -569,19 +535,6 @@ ORDER BY total_treatments DESC;
 ![image](https://github.com/user-attachments/assets/8b4e79d7-cfa9-4617-90df-8deb5677ef0b)
 
 
-
-CREATE VIEW Commander_Operations_View AS
-SELECT
-    o.operationid AS operation_id,
-    o.operationname AS operation_name,
-    s.soldier_name AS commander_name,
-    o.startdate,
-    o.location
-FROM operation o
-JOIN commander c 
-    ON o.id = c.soldier_id AND o.role_type = c.role_type
-JOIN soldier s 
-    ON c.soldier_id = s.soldier_id AND c.role_type = s.role_type AND s.role_type = 'commander';
 
 
     
@@ -591,24 +544,11 @@ JOIN soldier s
 
 
 
-SELECT 
-    commander_name, 
-    COUNT(*) AS number_of_operations
-FROM Commander_Operations_View
-GROUP BY commander_name
-ORDER BY number_of_operations DESC;
-
-
 
 ### שאילתה 2:
 ![image](https://github.com/user-attachments/assets/8f42b3bc-f912-4bf2-85af-b550d94b769e)
 
 
 
-SELECT 
-    operation_name, 
-    startdate, 
-    location
-FROM Commander_Operations_View
-WHERE EXTRACT(YEAR FROM startdate)=2024;
+
 
