@@ -536,6 +536,7 @@ Provide the following SQL scripts:
 
 
 ### מבט שני -חיל מבצעים:
+המבט מציג רשימת מבצעים צבאיים כולל פרטי המבצע, מיקומו, תאריך התחלה, ושם המפקד שאחראי עליו.
 
 
 
@@ -548,12 +549,14 @@ Provide the following SQL scripts:
     
 
 ### שאלתה 1:
+השאילתה מציגה את שמות המבצעים, תאריכי ההתחלה והמיקומים של כל המבצעים שהחלו בשנת 2024.
 ![image](https://github.com/user-attachments/assets/b49a4411-ccd2-47c1-b3a0-e63b1b74e4ec)
 
 
 
 
 ### שאילתה 2:
+השאילתה מציגה כמה מבצעים פיקד כל מפקד, וממיינת מהכי פעיל לפחות פעיל.
 ![image](https://github.com/user-attachments/assets/8f42b3bc-f912-4bf2-85af-b550d94b769e)
 
 
