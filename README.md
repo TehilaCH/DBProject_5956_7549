@@ -466,14 +466,18 @@ Provide the following SQL scripts:
 ### אגף המבצעים -ERD:
 
 
-![image](https://github.com/user-attachments/assets/627d1445-d969-421e-b8ba-d240f3abd5c7)
+![image](https://github.com/user-attachments/assets/6521339a-eb1a-4d6a-9b5b-e5f1129d0538)
+
 
 
 ### אגפים ממוזגים ERD משותף לחיל רפואה וחיל המבצעים:
 
-![image](https://github.com/user-attachments/assets/000c6e25-b09f-4e00-a7af-80e73d72803a)
+![image](https://github.com/user-attachments/assets/e25a5ce6-b693-4422-84a8-1b2be2e72756)
 
 
+
+### אנטגרציה-DSD:
+![image](https://github.com/user-attachments/assets/f622cb36-1b07-4e50-9701-513cc7ec00ee)
 
 
 
@@ -506,6 +510,85 @@ Provide the following SQL scripts:
 
 התוצר – תרשים ERD מאוחד, קריא, נטול כפילויות, אשר מאפשר עבודה משותפת של שני האגפים, שאלת מידע רוחבית ושיפור תחזוקת בסיס הנתונים בעתיד.
 
+## מבטים:
+### מבט ראשון-חיל רפואה:
+CREATE VIEW Medical_Treatments_View AS
+SELECT
+    t.treatment_id,
+    t.treatment_type,
+    t.treatment_duration,
+    t.date,
+    ps.soldier_name AS paramedic_name,
+    pt_soldier.soldier_name AS patient_name,
+    pt.birthday,
+    me.event_date,
+    h.hospital_name
+FROM Treatment t
+JOIN soldier ps ON t.paramedic_id = ps.soldier_id AND t.role_type = ps.role_type AND ps.role_type = 'paramedic'
+JOIN receives_treatment rt ON t.treatment_id = rt.treatment_id
+JOIN patient pt ON rt.soldier_id = pt.soldier_id AND rt.role_type = pt.role_type
+JOIN soldier pt_soldier ON pt.soldier_id = pt_soldier.soldier_id AND pt.role_type = pt_soldier.role_type AND pt_soldier.role_type = 'patient'
+JOIN Medical_event me ON pt.event_id = me.event_id
+LEFT JOIN Hospital h ON pt.hospital_id = h.hospital_id;
 
 
+
+### שאילתה 1:
+![image](https://github.com/user-attachments/assets/48adf0a5-5142-424e-8de2-aff4a777d5b8)
+
+
+SELECT DISTINCT patient_name
+FROM Medical_Treatments_View
+WHERE EXTRACT(YEAR FROM event_date) = 2023;
+
+
+
+### שאילתה 2:
+![image](https://github.com/user-attachments/assets/c39ed96a-02cd-4ef3-83fe-92c30a4a8a90)
+
+
+SELECT paramedic_name, COUNT(*) AS total_treatments
+FROM Medical_Treatments_View
+GROUP BY paramedic_name
+ORDER BY total_treatments DESC;
+
+
+## מבט שני -חיל מבצעים:
+
+![image](https://github.com/user-attachments/assets/8b4e79d7-cfa9-4617-90df-8deb5677ef0b)
+
+CREATE VIEW Commander_Operations_View AS
+SELECT
+    o.operationid AS operation_id,
+    o.operationname AS operation_name,
+    s.soldier_name AS commander_name,
+    o.startdate,
+    o.location
+FROM operation o
+JOIN commander c 
+    ON o.id = c.soldier_id AND o.role_type = c.role_type
+JOIN soldier s 
+    ON c.soldier_id = s.soldier_id AND c.role_type = s.role_type AND s.role_type = 'commander';
+
+### שאלתה 1:
+![image](https://github.com/user-attachments/assets/b49a4411-ccd2-47c1-b3a0-e63b1b74e4ec)
+
+SELECT 
+    commander_name, 
+    COUNT(*) AS number_of_operations
+FROM Commander_Operations_View
+GROUP BY commander_name
+ORDER BY number_of_operations DESC;
+
+
+### שאילתה 2:
+![image](https://github.com/user-attachments/assets/8f42b3bc-f912-4bf2-85af-b550d94b769e)
+
+
+SELECT 
+    operation_name, 
+    startdate, 
+    location
+FROM Commander_Operations_View
+WHERE EXTRACT(YEAR FROM startdate)=2024;
 
