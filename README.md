@@ -505,6 +505,9 @@ Provide the following SQL scripts:
 
 ## מבטים:
 ### מבט ראשון-חיל רפואה:
+המבט Medical_Treatments_View מציג את כל הטיפולים הרפואיים שבוצעו, כולל פרטי הטיפול, הפרמדיק, המטופל, האירוע הרפואי ובית החולים שבו טופל החייל.
+
+
 ![image](https://github.com/user-attachments/assets/6f7ecead-791c-4279-9e6c-36ef508e13ab)
 
 
@@ -513,6 +516,9 @@ Provide the following SQL scripts:
 
 
 ### שאילתה 1:
+השאילתה מציגה את שמות כל המטופלים שטופלו באירועים רפואיים שהתרחשו בשנת 2023, בלי כפילויות.
+
+
 ![image](https://github.com/user-attachments/assets/48adf0a5-5142-424e-8de2-aff4a777d5b8)
 
 
@@ -520,6 +526,7 @@ Provide the following SQL scripts:
 
 
 ### שאילתה 2:
+השאילתה מציגה את מספר הטיפולים שביצע כל פרמדיק, וממיינת את התוצאות מהפרמדיק שביצע הכי הרבה טיפולים לפחות.
 ![image](https://github.com/user-attachments/assets/c39ed96a-02cd-4ef3-83fe-92c30a4a8a90)
 
 
