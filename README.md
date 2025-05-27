@@ -498,17 +498,6 @@ Provide the following SQL scripts:
 
 כך קיבלנו מבנה אחיד, חסכנו כפילות ואפשרנו הרחבה עתידית לתפקידים חדשים.
 
-**הפשטת “אירועים”**
-
-יצרנו יישות‑על Event (PK: event_id, event_location, event_date).
-
-ממנה יורשות היישויות:
-
-ה-MedicalEvent (שדה: number_of_injured)
-
-ה-OperationalEvent (שדות: objective, mission_type ועוד).
-
-התוצר – תרשים ERD מאוחד, קריא, נטול כפילויות, אשר מאפשר עבודה משותפת של שני האגפים, שאלת מידע רוחבית ושיפור תחזוקת בסיס הנתונים בעתיד.
 
 ## מבטים:
 ### מבט ראשון-חיל רפואה:
@@ -533,6 +522,12 @@ LEFT JOIN Hospital h ON pt.hospital_id = h.hospital_id;
 
 
 
+
+
+
+
+
+
 ### שאילתה 1:
 ![image](https://github.com/user-attachments/assets/48adf0a5-5142-424e-8de2-aff4a777d5b8)
 
@@ -540,6 +535,11 @@ LEFT JOIN Hospital h ON pt.hospital_id = h.hospital_id;
 SELECT DISTINCT patient_name
 FROM Medical_Treatments_View
 WHERE EXTRACT(YEAR FROM event_date) = 2023;
+
+
+
+
+
 
 
 
@@ -553,9 +553,22 @@ GROUP BY paramedic_name
 ORDER BY total_treatments DESC;
 
 
+
+
+
+
+
+
+
 ## מבט שני -חיל מבצעים:
 
+
+
+
+
 ![image](https://github.com/user-attachments/assets/8b4e79d7-cfa9-4617-90df-8deb5677ef0b)
+
+
 
 CREATE VIEW Commander_Operations_View AS
 SELECT
@@ -570,8 +583,13 @@ JOIN commander c
 JOIN soldier s 
     ON c.soldier_id = s.soldier_id AND c.role_type = s.role_type AND s.role_type = 'commander';
 
+
+    
+
 ### שאלתה 1:
 ![image](https://github.com/user-attachments/assets/b49a4411-ccd2-47c1-b3a0-e63b1b74e4ec)
+
+
 
 SELECT 
     commander_name, 
@@ -581,8 +599,10 @@ GROUP BY commander_name
 ORDER BY number_of_operations DESC;
 
 
+
 ### שאילתה 2:
 ![image](https://github.com/user-attachments/assets/8f42b3bc-f912-4bf2-85af-b550d94b769e)
+
 
 
 SELECT 
