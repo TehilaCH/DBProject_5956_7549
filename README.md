@@ -385,9 +385,6 @@ Provide the following SQL scripts:
 # דוח פרויקט - שלב ג'
 ## אינטגרציה ומבטים
 ### אגף המבצעים-DSD
-![image](https://github.com/user-attachments/assets/588f6c4f-08e5-4916-8ce7-c1bbff5d8ab1)
-
-![image](https://github.com/user-attachments/assets/7a2a1234-ebef-4e48-85ed-72fdbfbcaed6)
 
 ![Untitled (8)](https://github.com/user-attachments/assets/52d471fa-da9d-4cb3-bbf8-c5d47cba3ec8)
 
@@ -483,7 +480,8 @@ Provide the following SQL scripts:
 
 
 ### אנטגרציה-DSD:
-![image](https://github.com/user-attachments/assets/f622cb36-1b07-4e50-9701-513cc7ec00ee)
+![Untitled (7)](https://github.com/user-attachments/assets/86ad55a9-a0bb-4ca7-8d25-176217d46471)
+
 
 
 
