@@ -562,6 +562,7 @@ Provide the following SQL scripts:
 ![image](https://github.com/user-attachments/assets/8f42b3bc-f912-4bf2-85af-b550d94b769e)
 
 
-
+## דוח שלב ד'
+### פונקציה 
 
 
