@@ -564,5 +564,25 @@ Provide the following SQL scripts:
 
 ## דוח שלב ד'
 ### פונקציה 
+![image](https://github.com/user-attachments/assets/2b88c33f-0353-4a20-a040-a6e6d6a00cd8)
 
+## טריגר בדיקה שעובד :
+רואים ניסיון של פרמדיק עם ת.ז 6 וניסיון 3 שנים 
+![image](https://github.com/user-attachments/assets/579a64ff-471d-432c-9604-a45fa0f9f2d5)
+
+ לאחר מכן מוספים טיול שביצע אותו פרמדיק טיפול מסוג חירום ומשך זמן 25 דקות וזה אמור להפעיל את הטריגר אוטומטית שיעלה את הניסיון של הפרמדיק הזה 
+![image](https://github.com/user-attachments/assets/76ba482f-0308-4fa1-9b48-8933207f72a9)
+
+ובכן זה מה שקורה נסיון הפרמדיק עולה מ3 ל4 שנים.
+![image](https://github.com/user-attachments/assets/619b1a92-6876-4635-9738-9b445aac3514)
+
+  בדיקה שהפורצדורה עובדת כמו שצריך:
+  הרצנו שאילתא שיחזיר את כל הת.ז של הפרמדיקים שאמורים להשתנות בעקבות הפורצדורה
+
+  ![image](https://github.com/user-attachments/assets/63dabc9b-cb81-41c9-8ec5-907d5d26a0c5)
+
+נתונים לפני הרצה 
+![image](https://github.com/user-attachments/assets/1cb74c3e-9ce5-4f63-bd0b-482d1ba43f22)
+ואחרי הרצה 
+![image](https://github.com/user-attachments/assets/ebdb4a7a-46e3-4cbc-ab81-485f3e5fd190)
 
