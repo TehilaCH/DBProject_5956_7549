@@ -640,3 +640,14 @@ Provide the following SQL scripts:
 ![image](https://github.com/user-attachments/assets/ff03c277-8a43-4cd4-b3a9-66eed8abf6d4)
 
 
+### בדיקת הטריגר 
+נתונים על מפקד מסויים 
+![image](https://github.com/user-attachments/assets/0c10ccb0-b309-419c-b060-71a0a9bfa791)
+
+עידכון רמת ניסיון של מפקד מסויים 
+
+![image](https://github.com/user-attachments/assets/ccd1b12b-2bcf-4d5e-9dad-35c12f300a80)
+ניתן לראות שלאחר עידכון של ניסיון של מפקד מסויים עם ת.ז שווה 1 הדרגה שלו השתנה אוטומטית בעיקבות הטריגר 
+
+![image](https://github.com/user-attachments/assets/fe284446-9d46-40ba-ae94-6d708651520b)
+
