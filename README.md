@@ -568,6 +568,12 @@ Provide the following SQL scripts:
 ### פונקציה 
 ![image](https://github.com/user-attachments/assets/2b88c33f-0353-4a20-a040-a6e6d6a00cd8)
 
+נראה חריגה למשל נעשה קריאה מטבלה שלא קיימת
+![image](https://github.com/user-attachments/assets/fb3fc999-4341-46fd-a7e7-36a529cf6eb8)
+זו הרצה של הפונקציה והשגיאה שמודפסת
+
+![image](https://github.com/user-attachments/assets/05726d62-ad24-4980-8828-9bfe1f09cff0)
+
 ## טריגר בדיקה שעובד :
 רואים ניסיון של פרמדיק עם ת.ז שווה 6 וניסיון 3 שנים. 
 ![image](https://github.com/user-attachments/assets/579a64ff-471d-432c-9604-a45fa0f9f2d5)
