@@ -591,8 +591,10 @@ Provide the following SQL scripts:
 הרצה של תוכנית ראשית:
 ![image](https://github.com/user-attachments/assets/7f7c0bf1-158c-4dea-9a71-6e5dfe4dca4e)
 חלק מההדפסות מהפונקציה והפורצדורה 
+הרצנו שאיתה שתראה את הנתונים שיחזרו מהפונקציה 
 
-בדיקת נתונים של הפונקציה לפני הרצה:
+נתונים לפני הרצת הפונקציה עם הנתונים של בית חולים עןם ת.ז 2 ומספר טיפולים גדול שווה 2 עשינו שאילתה שבודקת מי עומד בתנאי וחיוחזר:
+
  
 ![image](https://github.com/user-attachments/assets/d07fde9d-b077-4144-bc90-318454c25f97)
 
@@ -603,13 +605,18 @@ Provide the following SQL scripts:
 
 ![image](https://github.com/user-attachments/assets/8b507fdc-32b1-4463-8c3e-8a939f71fce2)
 
-![image](https://github.com/user-attachments/assets/e35b0ac6-fd1a-4fa3-a84b-be867f36a67b)
 
 
-נתונים לפני הרצת הפורצדורה:
-![image](https://github.com/user-attachments/assets/87a44336-9b61-40ca-88f8-83315a6ba28a)
 
-בדיקת נתונים אחרי הריצה של הפורצדורה:
-![image](https://github.com/user-attachments/assets/4c7fd95c-e937-4272-b7ad-520b53ed5fdf)
+
+
+### נתונים לפני הרצת הפורצדורה:
+
+![image](https://github.com/user-attachments/assets/64dc1461-6365-45fe-8633-13eb270e4ed8)
+
+
+
+### בדיקת נתונים אחרי הריצה של הפורצדורה:
+![image](https://github.com/user-attachments/assets/ff03c277-8a43-4cd4-b3a9-66eed8abf6d4)
 
 
