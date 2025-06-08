@@ -565,7 +565,8 @@ Provide the following SQL scripts:
 ## דוח שלב ד'
 ## תוכנית ראשית 1
 
-### פונקציה 
+הרצת תוכנית ראשית:
+### פלט הפונקציה:
 ![image](https://github.com/user-attachments/assets/2b88c33f-0353-4a20-a040-a6e6d6a00cd8)
 
 נראה חריגה למשל נעשה קריאה מטבלה שלא קיימת
