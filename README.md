@@ -563,6 +563,7 @@ Provide the following SQL scripts:
 
 
 ## דוח שלב ד'
+## תוכנית ראשית 1
 
 ### פונקציה 
 ![image](https://github.com/user-attachments/assets/2b88c33f-0353-4a20-a040-a6e6d6a00cd8)
@@ -589,12 +590,10 @@ Provide the following SQL scripts:
 ![image](https://github.com/user-attachments/assets/ebdb4a7a-46e3-4cbc-ab81-485f3e5fd190)
 
 
-
 ## תוכנית ראשית 2
 
 הרצה של תוכנית ראשית:
 ![image](https://github.com/user-attachments/assets/7f7c0bf1-158c-4dea-9a71-6e5dfe4dca4e)
-
 
 ### נתונים לפני הרצת הפונקציה:
 הרצנו שאילתא שמחזירה את כל החולים שנמצאים בית חולים מספר 2 (ת.ז) ומספר טיפולים גדול שווה 2 ומי עומד בתנאי ויווחזר:
@@ -626,6 +625,7 @@ Provide the following SQL scripts:
 
 
 ### בדיקת נתונים אחרי הריצה של הפורצדורה:
+וכן ניתן ליראות שהדרגות השתנו הבתאם.
 ![image](https://github.com/user-attachments/assets/ff03c277-8a43-4cd4-b3a9-66eed8abf6d4)
 
 
