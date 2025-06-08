@@ -586,3 +586,30 @@ Provide the following SQL scripts:
 ואחרי הרצה 
 ![image](https://github.com/user-attachments/assets/ebdb4a7a-46e3-4cbc-ab81-485f3e5fd190)
 
+
+##תוכנית 2
+הרצה של תוכנית ראשית:
+![image](https://github.com/user-attachments/assets/7f7c0bf1-158c-4dea-9a71-6e5dfe4dca4e)
+חלק מההדפסות מהפונקציה והפורצדורה 
+
+בדיקת נתונים של הפונקציה לפני הרצה:
+ 
+![image](https://github.com/user-attachments/assets/d07fde9d-b077-4144-bc90-318454c25f97)
+
+אחרי הרצת הפונקציה 
+![image](https://github.com/user-attachments/assets/9bc93090-d809-4160-8caa-b37504db7576)
+
+
+
+![image](https://github.com/user-attachments/assets/8b507fdc-32b1-4463-8c3e-8a939f71fce2)
+
+![image](https://github.com/user-attachments/assets/e35b0ac6-fd1a-4fa3-a84b-be867f36a67b)
+
+
+נתונים לפני הרצת הפורצדורה:
+![image](https://github.com/user-attachments/assets/87a44336-9b61-40ca-88f8-83315a6ba28a)
+
+בדיקת נתונים אחרי הריצה של הפורצדורה:
+![image](https://github.com/user-attachments/assets/4c7fd95c-e937-4272-b7ad-520b53ed5fdf)
+
+
