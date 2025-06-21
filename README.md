@@ -654,12 +654,12 @@ Provide the following SQL scripts:
 # דוח שלב ה'
 
 ## קבצי המערכת:
- מסך ראשי של המערכת- main_window.py
- ניהול מבצעים (CRUD)- operation_crud.py
- ניהול ציוד (CRUD)- equipment_crud.py
- ניהול טבלת דרושים(טבלה מקשרת בין ציוד למבצע)- requires_crud.py
- הפעלת שאילתות, פונקציות ופורצדורות- query_and_procedure.py
- התחברות למסד נתונים- db_config.py 
+מסך ראשי של המערכת- main_window.py
+ניהול מבצעים (CRUD)- operation_crud.py
+ניהול ציוד (CRUD)- equipment_crud.py
+ניהול טבלת דרושים(טבלה מקשרת בין ציוד למבצע)- requires_crud.py
+הפעלת שאילתות, פונקציות ופורצדורות- query_and_procedure.py
+התחברות למסד נתונים- db_config.py 
 
 ## הוראות הפעלה של האפליקציה:
 מסכים זמינים במערכת:
