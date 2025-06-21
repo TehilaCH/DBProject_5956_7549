@@ -705,3 +705,21 @@ Provide the following SQL scripts:
 
 ### מסך ניהול דרישות ציוד:
 ![image](https://github.com/user-attachments/assets/3e59c1a2-951b-4823-8afb-d530479960da)
+
+### מסך שאילתות ופורצדורות:
+![image](https://github.com/user-attachments/assets/ceb83930-720c-4668-8d3c-3ce431ed82c1)
+### תוצאת שאילתא 1:
+
+![image](https://github.com/user-attachments/assets/74c6710c-16b2-431c-92de-f434b76c6de7)
+
+### תוצאת שאילתא 2:
+![image](https://github.com/user-attachments/assets/5fb570e6-460e-4456-9e3d-006293d86d96)
+
+### תוצאת הרצת פונקציה:
+![image](https://github.com/user-attachments/assets/bcbfeb2b-2afa-4874-b1d7-2c391d04061b)
+
+### תוצאת הרצת הפורצדורה:
+![image](https://github.com/user-attachments/assets/0691a5e3-1655-4166-832c-066e6c787f3c)
+
+
+
