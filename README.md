@@ -706,13 +706,16 @@ Provide the following SQL scripts:
 ![image](https://github.com/user-attachments/assets/302a0e7e-41c8-4060-97c0-ad0c65289c80)
 
 ### מסך ניהול מבצעים:
-![image](https://github.com/user-attachments/assets/269b28fe-dde5-49a0-b7e8-e425a4a48968)
+![image](https://github.com/user-attachments/assets/37455a33-c05d-4411-8095-e7530be0360c)
 
-### מסך ניהול ציוד:
-![image](https://github.com/user-attachments/assets/ac47fd65-9e70-4120-89d0-f6c598779fe7)
+
+### מסך ניהול ציוד: 
+![image](https://github.com/user-attachments/assets/866b7cdc-db7e-4609-aefa-cf8b52b65102)
+
 
 ### מסך ניהול דרישות ציוד:
-![image](https://github.com/user-attachments/assets/3e59c1a2-951b-4823-8afb-d530479960da)
+![image](https://github.com/user-attachments/assets/873852ab-a3f8-4806-ac7a-f38965d14059)
+
 
 ### מסך שאילתות ופורצדורות:
 ![image](https://github.com/user-attachments/assets/ceb83930-720c-4668-8d3c-3ce431ed82c1)
