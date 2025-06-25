@@ -1,81 +1,126 @@
 from tkinter import *
-from tkinter import messagebox
+from tkinter import messagebox, ttk
 from datetime import datetime
-from db_config import get_connection  # ודא שזה קיים ומוגדר נכון
+from db_config import get_connection
 
 def open_operation_crud():
     win = Toplevel()
-    win.title("ניהול מבצעים")
-    win.geometry("850x600")
-    win.configure(bg="#f0fff0")
+    win.title("Operation Management System")
+    win.geometry("1150x700")
+    win.configure(bg="#e8f5e9")
 
-    # תוויות
+    # לאפשר תצוגה מתרחבת בעמודות ובשורות
+    win.grid_rowconfigure(0, weight=1)
+    win.grid_columnconfigure(1, weight=1)
+
+    label_bg = "#e8f5e9"
+    button_bg = "#33691e"
+    button_fg = "white"
+
     labels = [
-        "מזהה מבצע (Operation ID):",
-        "שם המבצע (Operation Name):",
-        "מטרה (Objective):",
-        "מיקום (Location):",
-        "תאריך התחלה (YYYY-MM-DD):",
-        "תאריך סיום (YYYY-MM-DD):",
-        "מזהה מפקד (Commander ID):",
-        "סוג תפקיד (Role Type):"
+        "Operation ID:", "Operation Name:", "Objective:", "Location:",
+        "Start Date (YYYY-MM-DD):", "End Date (YYYY-MM-DD):",
+        "Commander ID:", "Role Type:"
     ]
-
     entries = []
 
+    input_frame = Frame(win, bg=label_bg)
+    input_frame.grid(row=0, column=0, padx=20, pady=10, sticky="nw")
+
     for i, text in enumerate(labels):
-        Label(win, text=text, bg="#f0fff0", anchor="e", width=30).grid(row=i, column=0, padx=10, pady=5, sticky=E)
-        entry = Entry(win, width=30)
-        entry.grid(row=i, column=1, padx=5, pady=5)
+        Label(input_frame, text=text, bg=label_bg, anchor="w", width=25, font=("Arial", 11, "bold")) \
+            .grid(row=i, column=0, padx=5, pady=5, sticky=W)
+        entry = Entry(input_frame, width=30, font=("Arial", 11))
+        entry.grid(row=i, column=1, padx=5, pady=5, sticky=W)
         entries.append(entry)
 
     entries[7].insert(0, "commander")
 
-    # תצוגת פלט עם גלילה
-    frame = Frame(win)
-    frame.grid(row=0, column=2, rowspan=12, padx=10, pady=10, sticky="nsew")
+    # Frame לטבלה וסרגלים - תופס את כל המקום הזמין
+    tree_frame = Frame(win)
+    tree_frame.grid(row=0, column=1, padx=20, pady=10, sticky="nsew")
 
-    scrollbar = Scrollbar(frame)
-    scrollbar.pack(side=RIGHT, fill=Y)
+    # מאפשר ל- tree_frame להתרחב
+    tree_frame.grid_rowconfigure(0, weight=1)
+    tree_frame.grid_columnconfigure(0, weight=1)
 
-    output = Text(frame, width=60, height=30, font=("Arial", 12), yscrollcommand=scrollbar.set)
-    output.pack(side=LEFT, fill=BOTH)
+    columns = ("OperationID", "Name", "Objective", "Location", "Start", "End", "CommanderID", "Role")
 
-    scrollbar.config(command=output.yview)
+    style = ttk.Style()
+    style.configure("Treeview",
+                    background="white",
+                    foreground="black",
+                    rowheight=25,
+                    fieldbackground="white",
+                    borderwidth=1,
+                    relief="solid",
+                    font=("Arial", 10))
+    style.configure("Treeview.Heading",
+                    font=("Arial", 11, "bold"),
+                    background="#a5d6a7",
+                    relief="raised")
+    style.map('Treeview', background=[('selected', '#aed581')])
 
-    # ניקוי שדות
+    # סרגל גלילה אופקי ואנכי
+    y_scrollbar = Scrollbar(tree_frame, orient=VERTICAL)
+    y_scrollbar.grid(row=0, column=1, sticky='ns')
+
+    x_scrollbar = Scrollbar(tree_frame, orient=HORIZONTAL)
+    x_scrollbar.grid(row=1, column=0, sticky='ew')
+
+    tree = ttk.Treeview(tree_frame,
+                        columns=columns,
+                        show='headings',
+                        style="Treeview",
+                        yscrollcommand=y_scrollbar.set,
+                        xscrollcommand=x_scrollbar.set)
+
+    tree.grid(row=0, column=0, sticky='nsew')
+
+    y_scrollbar.config(command=tree.yview)
+    x_scrollbar.config(command=tree.xview)
+
+    for col in columns:
+        tree.heading(col, text=col)
+        tree.column(col, width=200, anchor=CENTER)
+
+    tree.tag_configure('oddrow', background='#f1f8e9')
+    tree.tag_configure('evenrow', background='#dcedc8')
+
+    # פונקציות עזר ותפעול נותרו כפי שהיו (לשמור על הקוד שלך)
+
     def clear_fields():
         for e in entries:
             e.delete(0, END)
         entries[7].insert(0, "commander")
 
-    # בדיקת תקינות קלטים
-    def validate_inputs():
+    def validate_inputs(allow_partial=False):
         try:
-            if not entries[0].get().isdigit():
-                raise ValueError("מזהה מבצע חייב להיות מספר שלם.")
+            operation_id = entries[0].get().strip()
+            if not operation_id.isdigit():
+                raise ValueError("Operation ID must be an integer.")
 
-            for i, e in enumerate(entries):
-                if not e.get().strip():
-                    raise ValueError(f"שדה '{labels[i]}' לא יכול להיות ריק.")
+            required_indexes = [1, 4, 5, 6, 7] if not allow_partial else []
+            for i in required_indexes:
+                if not entries[i].get().strip():
+                    raise ValueError(f"The field '{labels[i]}' cannot be empty.")
 
-            start = datetime.strptime(entries[4].get(), "%Y-%m-%d")
-            end = datetime.strptime(entries[5].get(), "%Y-%m-%d")
-
-            if end < start:
-                raise ValueError("תאריך סיום לא יכול להיות מוקדם מתאריך התחלה.")
+            start_str = entries[4].get().strip()
+            end_str = entries[5].get().strip()
+            if start_str and end_str:
+                start = datetime.strptime(start_str, "%Y-%m-%d")
+                end = datetime.strptime(end_str, "%Y-%m-%d")
+                if end < start:
+                    raise ValueError("End date cannot be earlier than start date.")
 
             return True
-
         except ValueError as ve:
-            messagebox.showerror("שגיאת קלט", str(ve))
+            messagebox.showerror("Input Error", str(ve))
             return False
-
         except Exception:
-            messagebox.showerror("שגיאת תאריך", "יש להזין תאריכים בפורמט YYYY-MM-DD.")
+            messagebox.showerror("Date Error", "Dates must be in YYYY-MM-DD format.")
             return False
 
-    # הצגת המבצעים
     def show_operations():
         try:
             conn = get_connection()
@@ -86,94 +131,105 @@ def open_operation_crud():
                 ORDER BY OperationID DESC
             """)
             result = cur.fetchall()
-            output.delete(1.0, END)
-            output.insert(END, "\U0001F4CB רשימת מבצעים:\n")
-            output.insert(END, "=" * 70 + "\n")
 
-            for row in result:
-                output.insert(END, f"מזהה: {row[0]} | שם: {row[1]} | מטרה: {row[2]}\n")
-                output.insert(END, f"מיקום: {row[3]} | התחלה: {row[4]} | סיום: {row[5]}\n")
-                output.insert(END, f"מפקד: {row[6]} | תפקיד: {row[7]}\n")
-                output.insert(END, "-" * 70 + "\n")
+            for item in tree.get_children():
+                tree.delete(item)
+
+            for i, row in enumerate(result):
+                row_data = [row[0], row[1] or "---", row[2] or "---", row[3] or "---",
+                            row[4], row[5], row[6], row[7]]
+                tag = 'evenrow' if i % 2 == 0 else 'oddrow'
+                tree.insert("", "end", values=row_data, tags=(tag,))
 
         except Exception as e:
-            messagebox.showerror("שגיאה", str(e))
+            messagebox.showerror("Error", str(e))
         finally:
             if 'cur' in locals(): cur.close()
             if 'conn' in locals(): conn.close()
 
-    # הוספת מבצע
     def insert_operation():
-        if not validate_inputs():
-            return
+        if not validate_inputs(): return
         try:
+            values = [e.get().strip() or None for e in entries]
             conn = get_connection()
             cur = conn.cursor()
             cur.execute("""
                 INSERT INTO Operation (OperationID, OperationName, Objective, Location, startDate, endDate, ID, role_type)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-            """, tuple(e.get() for e in entries))
+            """, values)
             conn.commit()
-            messagebox.showinfo("הצלחה", "מבצע נוסף בהצלחה.")
+            messagebox.showinfo("Success", "Operation added successfully.")
             clear_fields()
             show_operations()
         except Exception as e:
-            messagebox.showerror("שגיאה", str(e))
+            messagebox.showerror("Error", str(e))
         finally:
             if 'cur' in locals(): cur.close()
             if 'conn' in locals(): conn.close()
 
-    # עדכון מבצע
     def update_operation():
-        if not validate_inputs():
+        if not entries[0].get().strip().isdigit():
+            messagebox.showerror("Error", "Please enter a valid Operation ID to update.")
+            return
+        if not validate_inputs(allow_partial=True): return
+        try:
+            fields, values = [], []
+            field_names = ["OperationName", "Objective", "Location", "startDate", "endDate", "ID", "role_type"]
+            for i in range(1, 8):
+                value = entries[i].get().strip()
+                if value:
+                    fields.append(f"{field_names[i-1]} = %s")
+                    values.append(value)
+            if not fields:
+                messagebox.showwarning("No Changes", "No fields were filled to update.")
+                return
+
+            values.append(entries[0].get())
+            query = f"UPDATE Operation SET {', '.join(fields)} WHERE OperationID = %s"
+            conn = get_connection()
+            cur = conn.cursor()
+            cur.execute(query, values)
+            if cur.rowcount == 0:
+                raise Exception("No operation found with this ID.")
+            conn.commit()
+            messagebox.showinfo("Success", "Operation updated successfully.")
+            clear_fields()
+            show_operations()
+        except Exception as e:
+            messagebox.showerror("Error", str(e))
+        finally:
+            if 'cur' in locals(): cur.close()
+            if 'conn' in locals(): conn.close()
+
+    def delete_operation():
+        operation_id = entries[0].get().strip()  # מפתח ראשי
+        if not operation_id.isdigit():
+            messagebox.showerror("Error", "Please enter a valid Operation ID to delete.")
             return
         try:
             conn = get_connection()
             cur = conn.cursor()
-            cur.execute("""
-                UPDATE Operation
-                SET OperationName=%s, Objective=%s, Location=%s, startDate=%s, endDate=%s, ID=%s, role_type=%s
-                WHERE OperationID=%s
-            """, (
-                entries[1].get(), entries[2].get(), entries[3].get(),
-                entries[4].get(), entries[5].get(), entries[6].get(), entries[7].get(), entries[0].get()
-            ))
+            cur.execute("DELETE FROM Operation WHERE OperationID = %s", (operation_id,))
             if cur.rowcount == 0:
-                raise Exception("לא נמצא מבצע עם מזהה זה.")
+                raise Exception("No operation found with this ID.")
             conn.commit()
-            messagebox.showinfo("הצלחה", "מבצע עודכן בהצלחה.")
+            messagebox.showinfo("Success", "Operation deleted successfully.")
             clear_fields()
             show_operations()
         except Exception as e:
-            messagebox.showerror("שגיאה", str(e))
+            messagebox.showerror("Error", str(e))
         finally:
             if 'cur' in locals(): cur.close()
             if 'conn' in locals(): conn.close()
 
-    # מחיקת מבצע
-    def delete_operation():
-        try:
-            conn = get_connection()
-            cur = conn.cursor()
-            cur.execute("DELETE FROM Operation WHERE OperationID = %s", (entries[0].get(),))
-            if cur.rowcount == 0:
-                raise Exception("לא נמצא מבצע למחיקה עם מזהה זה.")
-            conn.commit()
-            messagebox.showinfo("הצלחה", "מבצע נמחק.")
-            clear_fields()
-            show_operations()
-        except Exception as e:
-            messagebox.showerror("שגיאה", str(e))
-        finally:
-            if 'cur' in locals(): cur.close()
-            if 'conn' in locals(): conn.close()
-
-    # כפתורים
-    Button(win, text="הצג את כל המבצעים", command=show_operations, bg="#004d00", fg="white", width=25) \
+    # לחצנים
+    Button(input_frame, text="📋 Show All Operations", command=show_operations, bg=button_bg, fg=button_fg, width=25) \
         .grid(row=8, column=0, pady=10)
-    Button(win, text="הוספה", command=insert_operation, bg="#006699", fg="white", width=25) \
+    Button(input_frame, text="➕ Insert", command=insert_operation, bg="#2e7d32", fg="white", width=25) \
         .grid(row=8, column=1)
-    Button(win, text="עדכון", command=update_operation, bg="#cc9900", fg="black", width=25) \
+    Button(input_frame, text="✏️ Update", command=update_operation, bg="#f9a825", fg="black", width=25) \
         .grid(row=9, column=0)
-    Button(win, text="מחיקה", command=delete_operation, bg="#990000", fg="white", width=25) \
+    Button(input_frame, text="🗑️ Delete", command=delete_operation, bg="#c62828", fg="white", width=25) \
         .grid(row=9, column=1)
+
+
