@@ -1,181 +1,210 @@
 from tkinter import *
-from tkinter import messagebox
+from tkinter import messagebox, ttk
 from db_config import get_connection
 
 def open_equipment_crud():
     win = Toplevel()
-    win.title("ניהול ציוד")
-    win.geometry("850x500")
-    win.configure(bg="#fff0f5")
+    win.title("Equipment Management")
+    win.geometry("1150x700")
+    win.configure(bg="#e8f5e9")
 
-    Label(win, text="Equipment ID:", bg="#fff0f5").grid(row=0, column=0, padx=10, pady=5, sticky=E)
-    Label(win, text="Equipment Name:", bg="#fff0f5").grid(row=1, column=0, padx=10, pady=5, sticky=E)
-    Label(win, text="Quantity:", bg="#fff0f5").grid(row=2, column=0, padx=10, pady=5, sticky=E)
-    Label(win, text="Type (medical/operational):", bg="#fff0f5").grid(row=3, column=0, padx=10, pady=5, sticky=E)
+    # לאפשר תצוגה מתרחבת בעמודות ובשורות
+    win.grid_rowconfigure(0, weight=1)
+    win.grid_columnconfigure(1, weight=1)
 
-    id_entry = Entry(win, width=30)
-    name_entry = Entry(win, width=30)
-    qty_entry = Entry(win, width=30)
-    type_entry = Entry(win, width=30)
+    label_bg = "#e8f5e9"
+    button_bg = "#33691e"
+    button_fg = "white"
 
-    id_entry.grid(row=0, column=1)
-    name_entry.grid(row=1, column=1)
-    qty_entry.grid(row=2, column=1)
-    type_entry.grid(row=3, column=1)
+    labels = ["Equipment ID:", "Equipment Name:", "Quantity:", "Type (medical/operational):"]
+    entries = []
 
-    # תצוגה נגללת לציוד
-    frame = Frame(win)
-    frame.grid(row=0, column=2, rowspan=12, padx=10, pady=10, sticky="nsew")
+    input_frame = Frame(win, bg=label_bg)
+    input_frame.grid(row=0, column=0, padx=20, pady=10, sticky="nw")
 
-    scrollbar = Scrollbar(frame)
-    scrollbar.pack(side=RIGHT, fill=Y)
+    for i, text in enumerate(labels):
+        Label(input_frame, text=text, bg=label_bg, anchor="w", width=25, font=("Arial", 11, "bold")) \
+            .grid(row=i, column=0, padx=5, pady=5, sticky=W)
+        entry = Entry(input_frame, width=30, font=("Arial", 11))
+        entry.grid(row=i, column=1, padx=5, pady=5, sticky=W)
+        entries.append(entry)
 
-    output = Text(frame, width=60, height=25, font=("Arial", 12), yscrollcommand=scrollbar.set)
-    output.pack(side=LEFT, fill=BOTH)
+    # Frame לטבלה וסרגלים - תופס את כל המקום הזמין
+    tree_frame = Frame(win)
+    tree_frame.grid(row=0, column=1, padx=20, pady=10, sticky="nsew")
 
-    scrollbar.config(command=output.yview)
+    # מאפשר ל- tree_frame להתרחב
+    tree_frame.grid_rowconfigure(0, weight=1)
+    tree_frame.grid_columnconfigure(0, weight=1)
+
+    columns = ("EquipmentID", "Name", "Quantity", "Type")
+
+    style = ttk.Style()
+    style.configure("Treeview",
+                    background="white",
+                    foreground="black",
+                    rowheight=25,
+                    fieldbackground="white",
+                    borderwidth=1,
+                    relief="solid",
+                    font=("Arial", 10))
+    style.configure("Treeview.Heading",
+                    font=("Arial", 11, "bold"),
+                    background="#a5d6a7",
+                    relief="raised")
+    style.map('Treeview', background=[('selected', '#aed581')])
+
+    # סרגל גלילה אנכי בצד ימין
+    y_scrollbar = Scrollbar(tree_frame, orient=VERTICAL)
+    y_scrollbar.grid(row=0, column=1, sticky='ns')
+
+    # סרגל גלילה אופקי בתחתית, עם קוביית גלילה מימין ל-Treeview אבל כדי שייראה בצד שמאל - נוסיף padding
+    x_scrollbar = Scrollbar(tree_frame, orient=HORIZONTAL)
+    x_scrollbar.grid(row=1, column=0, sticky='ew')
+
+    tree = ttk.Treeview(tree_frame,
+                        columns=columns,
+                        show='headings',
+                        style="Treeview",
+                        yscrollcommand=y_scrollbar.set,
+                        xscrollcommand=x_scrollbar.set)
+
+    tree.grid(row=0, column=0, sticky='nsew')
+
+    y_scrollbar.config(command=tree.yview)
+    x_scrollbar.config(command=tree.xview)
+
+    for col in columns:
+        tree.heading(col, text=col)
+        tree.column(col, width=250, anchor=CENTER)
+
+    tree.tag_configure('oddrow', background='#f1f8e9')
+    tree.tag_configure('evenrow', background='#dcedc8')
 
     def clear_fields():
-        id_entry.delete(0, END)
-        name_entry.delete(0, END)
-        qty_entry.delete(0, END)
-        type_entry.delete(0, END)
+        for e in entries:
+            e.delete(0, END)
 
-    def validate_inputs():
+    def validate_inputs(allow_partial=False):
         try:
-            # מזהה ציוד מספרי
-            if not id_entry.get().isdigit():
-                raise ValueError("מזהה הציוד חייב להיות מספר שלם.")
-
-            if not name_entry.get().strip():
-                raise ValueError("שם הציוד לא יכול להיות ריק.")
-
-            if not qty_entry.get().isdigit() or int(qty_entry.get()) <= 0:
-                raise ValueError("הכמות חייבת להיות מספר שלם חיובי.")
-
-            if type_entry.get().lower() not in ["medical", "operational"]:
-                raise ValueError("סוג הציוד חייב להיות medical או operational.")
-
+            if not entries[0].get().strip().isdigit():
+                raise ValueError("Equipment ID must be an integer.")
+            if not allow_partial:
+                for i in range(1, 4):
+                    if not entries[i].get().strip():
+                        raise ValueError(f"The field '{labels[i]}' cannot be empty.")
+            if entries[2].get() and (not entries[2].get().isdigit() or int(entries[2].get()) <= 0):
+                raise ValueError("Quantity must be a positive integer.")
+            if entries[3].get() and entries[3].get().lower() not in ["medical", "operational"]:
+                raise ValueError("Type must be either 'medical' or 'operational'.")
             return True
-
         except ValueError as ve:
-            messagebox.showerror("שגיאת קלט", str(ve))
+            messagebox.showerror("Input Error", str(ve))
             return False
 
     def show_equipment():
         try:
             conn = get_connection()
             cur = conn.cursor()
-            cur.execute("SELECT * FROM equipment ORDER BY equipment_id DESC")
+            cur.execute("SELECT equipment_id, equipment_name, quantity, equipment_type FROM equipment ORDER BY equipment_id DESC")
             result = cur.fetchall()
-            output.delete(1.0, END)
-            output.insert(END, "📦 רשימת ציוד:\n")
-            output.insert(END, "=" * 70 + "\n")
 
-            for row in result:
-                output.insert(END, f"מזהה: {row[0]} | שם: {row[1]}\n")
-                output.insert(END, f"כמות: {row[2]} | סוג: {row[3]}\n")
-                output.insert(END, "-" * 70 + "\n")
+            tree.delete(*tree.get_children())
+            for i, row in enumerate(result):
+                tag = 'evenrow' if i % 2 == 0 else 'oddrow'
+                tree.insert("", "end", values=row, tags=(tag,))
 
         except Exception as e:
-            messagebox.showerror("שגיאה", str(e))
+            messagebox.showerror("Error", str(e))
         finally:
             if 'cur' in locals(): cur.close()
             if 'conn' in locals(): conn.close()
 
     def insert_equipment():
-        if not validate_inputs():
-            return
+        if not validate_inputs(): return
         try:
+            values = [e.get().strip() for e in entries]
+            values[3] = values[3].lower()
             conn = get_connection()
             cur = conn.cursor()
-            equipment_id = id_entry.get()
-            equipment_type = type_entry.get().lower()
-
-            cur.execute("SELECT 1 FROM equipment WHERE equipment_id = %s AND equipment_type = %s",
-                        (equipment_id, equipment_type))
+            cur.execute("SELECT 1 FROM equipment WHERE equipment_id = %s AND equipment_type = %s", (values[0], values[3]))
             if cur.fetchone():
-                messagebox.showwarning("שימו לב", "הציוד הזה כבר קיים במערכת!")
+                messagebox.showwarning("Notice", "This equipment already exists.")
                 return
-
             cur.execute("""
                 INSERT INTO equipment (equipment_id, equipment_name, quantity, equipment_type)
                 VALUES (%s, %s, %s, %s)
-            """, (
-                equipment_id,
-                name_entry.get(),
-                qty_entry.get(),
-                equipment_type
-            ))
+            """, values)
             conn.commit()
-            messagebox.showinfo("הצלחה", "הציוד נוסף בהצלחה.")
+            messagebox.showinfo("Success", "Equipment added successfully.")
             clear_fields()
             show_equipment()
-
         except Exception as e:
-            messagebox.showerror("שגיאה", str(e))
+            messagebox.showerror("Error", str(e))
         finally:
             if 'cur' in locals(): cur.close()
             if 'conn' in locals(): conn.close()
 
     def update_equipment():
-        if not validate_inputs():
+        if not entries[0].get().strip().isdigit():
+            messagebox.showerror("Error", "Please enter a valid Equipment ID.")
             return
+        if not validate_inputs(allow_partial=True): return
         try:
+            fields, values = [], []
+            field_names = ["equipment_name", "quantity", "equipment_type"]
+            for i in range(1, 4):
+                val = entries[i].get().strip()
+                if val:
+                    fields.append(f"{field_names[i-1]} = %s")
+                    values.append(val.lower() if i == 3 else val)
+            if not fields:
+                messagebox.showwarning("No Changes", "No fields to update.")
+                return
+            values.append(entries[0].get())
+            query = f"UPDATE equipment SET {', '.join(fields)} WHERE equipment_id = %s"
             conn = get_connection()
             cur = conn.cursor()
-
-            cur.execute("SELECT 1 FROM equipment WHERE equipment_id = %s AND equipment_type = %s",
-                        (id_entry.get(), type_entry.get().lower()))
-            if not cur.fetchone():
-                messagebox.showwarning("לא נמצא", "הציוד לא קיים – לא ניתן לעדכן.")
-                return
-
-            cur.execute("""
-                UPDATE equipment
-                SET equipment_name = %s, quantity = %s
-                WHERE equipment_id = %s AND equipment_type = %s
-            """, (
-                name_entry.get(), qty_entry.get(),
-                id_entry.get(), type_entry.get().lower()
-            ))
+            cur.execute(query, values)
+            if cur.rowcount == 0:
+                raise Exception("No equipment found with this ID.")
             conn.commit()
-            messagebox.showinfo("הצלחה", "הציוד עודכן בהצלחה.")
+            messagebox.showinfo("Success", "Equipment updated successfully.")
             clear_fields()
             show_equipment()
         except Exception as e:
-            messagebox.showerror("שגיאה", str(e))
+            messagebox.showerror("Error", str(e))
         finally:
             if 'cur' in locals(): cur.close()
             if 'conn' in locals(): conn.close()
 
     def delete_equipment():
+        eid = entries[0].get().strip()
+        if not eid.isdigit():
+            messagebox.showerror("Error", "Please enter a valid Equipment ID.")
+            return
         try:
             conn = get_connection()
             cur = conn.cursor()
-            equipment_id = id_entry.get()
-            equipment_type = type_entry.get().lower()
-
-            cur.execute("SELECT 1 FROM equipment WHERE equipment_id = %s AND equipment_type = %s",
-                        (equipment_id, equipment_type))
-            if not cur.fetchone():
-                messagebox.showwarning("שגיאה", "הציוד לא קיים במערכת – לא ניתן למחוק.")
-                return
-
-            cur.execute("DELETE FROM equipment WHERE equipment_id = %s AND equipment_type = %s",
-                        (equipment_id, equipment_type))
+            cur.execute("DELETE FROM equipment WHERE equipment_id = %s", (eid,))
+            if cur.rowcount == 0:
+                raise Exception("No equipment found with this ID.")
             conn.commit()
-            messagebox.showinfo("הצלחה", "הציוד נמחק בהצלחה.")
+            messagebox.showinfo("Success", "Equipment deleted successfully.")
             clear_fields()
             show_equipment()
         except Exception as e:
-            messagebox.showerror("שגיאה", str(e))
+            messagebox.showerror("Error", str(e))
         finally:
             if 'cur' in locals(): cur.close()
             if 'conn' in locals(): conn.close()
 
-    # כפתורים
-    Button(win, text="הצג ציוד", command=show_equipment, bg="#008080", fg="white", width=25).grid(row=4, column=0, pady=10)
-    Button(win, text="הוספה", command=insert_equipment, bg="#006699", fg="white", width=25).grid(row=4, column=1)
-    Button(win, text="עדכון", command=update_equipment, bg="#cc9900", fg="black", width=25).grid(row=5, column=0)
-    Button(win, text="מחיקה", command=delete_equipment, bg="#990000", fg="white", width=25).grid(row=5, column=1)
+    # לחצנים
+    Button(input_frame, text="📋 Show All Equipment", command=show_equipment, bg=button_bg, fg=button_fg, width=25) \
+        .grid(row=4, column=0, pady=10)
+    Button(input_frame, text="➕ Insert", command=insert_equipment, bg="#2e7d32", fg="white", width=25) \
+        .grid(row=4, column=1)
+    Button(input_frame, text="✏️ Update", command=update_equipment, bg="#f9a825", fg="black", width=25) \
+        .grid(row=5, column=0)
+    Button(input_frame, text="🗑️ Delete", command=delete_equipment, bg="#c62828", fg="white", width=25) \
+        .grid(row=5, column=1)
