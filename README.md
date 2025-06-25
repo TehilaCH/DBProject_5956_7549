@@ -662,7 +662,7 @@ Provide the following SQL scripts:
 
 **ניהול טבלת דרושים** (טבלה מקשרת בין ציוד למבצע)- requires_crud.py
 
-**הפעלת שאילתות, פונקציות ופורצדורות**- query_and_procedure.py
+**הפעלת שאילתות, פונקציות**- query_and_procedure.py
 
 **התחברות למסד נתונים**- db_config.py 
 
@@ -681,11 +681,11 @@ Provide the following SQL scripts:
 
 *שאילתה על טיפולים לפי פרמדיק.
 
-*עדכון סוג פצוע לפי מספר טיפולים.
+*שאיתא על 
 
 *הפעלת פונקציית refcursor למציאת פצועים בבית חולים.
 
-*פרוצדורת קידום מפקדים לפי ניסיון או מבצעים.
+*הפעלת פונקציה 
 
 
 ## כלים וטכנולוגיות בהם השתמשנו:
@@ -703,34 +703,35 @@ Provide the following SQL scripts:
 
 ## תמונות של מסכי האפליקציה:
 ### מסך כניסה:
-![image](https://github.com/user-attachments/assets/302a0e7e-41c8-4060-97c0-ad0c65289c80)
+![image](https://github.com/user-attachments/assets/290e7ff9-ca2a-4c1d-a6dd-a7d86bbf602b)
 
 ### מסך ניהול מבצעים:
-![image](https://github.com/user-attachments/assets/37455a33-c05d-4411-8095-e7530be0360c)
+![image](https://github.com/user-attachments/assets/be7d3360-db51-425e-a010-dfaa8ba06978)
 
 
 ### מסך ניהול ציוד: 
-![image](https://github.com/user-attachments/assets/866b7cdc-db7e-4609-aefa-cf8b52b65102)
+![image](https://github.com/user-attachments/assets/1bc929c0-8d83-4bb1-a42a-5a244e76df9e)
+
 
 
 ### מסך ניהול דרישות ציוד:
-![image](https://github.com/user-attachments/assets/873852ab-a3f8-4806-ac7a-f38965d14059)
+![image](https://github.com/user-attachments/assets/adbc78d2-0e23-4630-8a60-bbcae9eb43a8)
 
 
 ### מסך שאילתות ופורצדורות:
-![image](https://github.com/user-attachments/assets/ceb83930-720c-4668-8d3c-3ce431ed82c1)
+##### להוסיף תמונה!!!!!!!
+
 ### תוצאת שאילתא 1:
 
-![image](https://github.com/user-attachments/assets/74c6710c-16b2-431c-92de-f434b76c6de7)
+![image](https://github.com/user-attachments/assets/be7b31c4-a6e4-40ea-bc5f-6e436714f67a)
 
 ### תוצאת שאילתא 2:
-![image](https://github.com/user-attachments/assets/5fb570e6-460e-4456-9e3d-006293d86d96)
+![image](https://github.com/user-attachments/assets/ea3d4d01-63a5-425a-b5be-f265ee9a7e10)
 
-### תוצאת הרצת פונקציה:
-![image](https://github.com/user-attachments/assets/bcbfeb2b-2afa-4874-b1d7-2c391d04061b)
+### תוצאת הרצת פונקציה 1:
+![image](https://github.com/user-attachments/assets/87573640-d55f-4de7-8152-367ed1b8e8b6)
 
-### תוצאת הרצת הפורצדורה:
-![image](https://github.com/user-attachments/assets/0691a5e3-1655-4166-832c-066e6c787f3c)
-
+### תוצאת הרצת פונקציה 2:
+##### להוסיף תמונה!!!!!!!
 
 
