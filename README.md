@@ -719,7 +719,7 @@ Provide the following SQL scripts:
 
 
 ### מסך שאילתות ופורצדורות:
-##### להוסיף תמונה!!!!!!!
+![image](https://github.com/user-attachments/assets/0d3089d0-cdd3-4d33-abd3-1593e4fc3b15)
 
 ### תוצאת שאילתא 1:
 
@@ -728,10 +728,17 @@ Provide the following SQL scripts:
 ### תוצאת שאילתא 2:
 ![image](https://github.com/user-attachments/assets/ea3d4d01-63a5-425a-b5be-f265ee9a7e10)
 
-### תוצאת הרצת פונקציה 1:
+### תוצאת הרצת פונקציה:
 ![image](https://github.com/user-attachments/assets/87573640-d55f-4de7-8152-367ed1b8e8b6)
 
-### תוצאת הרצת פונקציה 2:
-##### להוסיף תמונה!!!!!!!
+### הצגה של טבלת המפקדים לפני שינויים:(כפתור הצגה לפני שינויי פורצדורה )
+
+![image](https://github.com/user-attachments/assets/46d8cbf9-5123-497f-a67a-a073ab26c69f)
+
+### תוצאת הרצת פורצדורה:
+פורצדורה שמעדכנת את דרגת המפקדים אם מתקיים אחד מהתנאים הבאים או שהניסיון שלהם גדול מ-5 ערך בררת מחדל או ש
+
+![image](https://github.com/user-attachments/assets/e111dde1-70fd-48b2-bd5c-f4b964fd823f)
+
 
 
