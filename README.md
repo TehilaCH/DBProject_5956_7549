@@ -722,13 +722,16 @@ Provide the following SQL scripts:
 ![image](https://github.com/user-attachments/assets/0d3089d0-cdd3-4d33-abd3-1593e4fc3b15)
 
 ### תוצאת שאילתא 1:
+
 שאילתת select 3 -מספר הטיפולים שביצע כל פרמדיק בכל חודש ושנה
 
 ![image](https://github.com/user-attachments/assets/be7b31c4-a6e4-40ea-bc5f-6e436714f67a)
 
 ### תוצאת שאילתא 2:
+
 שאילתת select 4 -רשימת החולים שטופלו ביותר מ-2 טיפולים
 ![image](https://github.com/user-attachments/assets/ea3d4d01-63a5-425a-b5be-f265ee9a7e10)
+
 
 ### תוצאת הרצת פונקציה:
 
@@ -740,11 +743,14 @@ Provide the following SQL scripts:
 
 -- מחזירה: REFCURSOR עם רשימת פצועים שעומדים בקריטריונים
 
+
 ![image](https://github.com/user-attachments/assets/87573640-d55f-4de7-8152-367ed1b8e8b6)
 
 ### הצגה של טבלת המפקדים לפני שינויים:(כפתור הצגה לפני שינויי פורצדורה )
 
+
 ![image](https://github.com/user-attachments/assets/46d8cbf9-5123-497f-a67a-a073ab26c69f)
+
 
 ### תוצאת הרצת פורצדורה:
 
@@ -753,6 +759,7 @@ Provide the following SQL scripts:
 -- קידום דרגת מפקדים לפי סך המבצעים שהם הובילו או ניסיון
 
 -- מקבלת סף ניסיון ומבצעים, ומקדמת את המפקדים העומדים בתנאי ערכי בררת מחדל ניסיון 5 ומבצעים 3
+
 ![image](https://github.com/user-attachments/assets/e111dde1-70fd-48b2-bd5c-f4b964fd823f)
 
 
