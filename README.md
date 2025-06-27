@@ -733,8 +733,11 @@ Provide the following SQL scripts:
 ### תוצאת הרצת פונקציה:
 
 -- פונקציה: get_patients_in_hospital_by_treatments מתוכנית 2
+
 -- הצגת חיילים (פצועים) בבית חולים לפי סינון מספר טיפולים
+
 -- קולטת: מזהה בית חולים ומספר מינימלי של טיפולים ערכי בררת מחדל (2,2)
+
 -- מחזירה: REFCURSOR עם רשימת פצועים שעומדים בקריטריונים
 
 ![image](https://github.com/user-attachments/assets/87573640-d55f-4de7-8152-367ed1b8e8b6)
@@ -746,7 +749,9 @@ Provide the following SQL scripts:
 ### תוצאת הרצת פורצדורה:
 
 -- פרוצדורה: promote_commander_if_qualified מתוכנית 2
+
 -- קידום דרגת מפקדים לפי סך המבצעים שהם הובילו או ניסיון
+
 -- מקבלת סף ניסיון ומבצעים, ומקדמת את המפקדים העומדים בתנאי ערכי בררת מחדל ניסיון 5 ומבצעים 3
 ![image](https://github.com/user-attachments/assets/e111dde1-70fd-48b2-bd5c-f4b964fd823f)
 
